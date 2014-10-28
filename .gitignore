@@ -1,0 +1,6 @@
+#Ignore bower_components
+/bower_components
+/bower_components/*
+
+#Ignore all logfiles and tempfiles.
+/.idea
