@@ -4,3 +4,6 @@
 
 #Ignore all logfiles and tempfiles.
 /.idea
+
+#Ignore mac files
+*.DS_Store

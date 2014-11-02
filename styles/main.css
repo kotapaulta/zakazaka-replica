@@ -2,13 +2,26 @@ body {
   margin: 0; }
 
 header {
-  background-color: #fff;
+  background-color: #ffffff;
   overflow: hidden;
   padding: 16px 0 12px;
-  text-align: center;
-  -webkit-box-shadow: #d4d5da 0 1px 4px -1px;
-  -moz-box-shadow: #d4d5da 0 1px 4px -1px;
-  box-shadow: #d4d5da 0 1px 4px -1px; }
+  text-align: center; }
+
+footer {
+  overflow: hidden;
+  padding-top: 20px; }
+
+.border-row {
+  border-top: 1px solid #ccc; }
+
+.box-shadow {
+  box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.1); }
+
+.mainWrapper {
+  box-shadow: 0 1px 18px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto; }
 
 .icon:before {
   content: "";
@@ -20,17 +33,18 @@ header {
   float: none;
   margin: 0 auto; }
 
-.mainWrapper {
-  box-shadow: 0 1px 18px 0 rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto; }
-
 .headerLogo {
   float: left;
   display: block;
   background-position: 0 -39px;
   height: 50px;
   width: 169px; }
+
+.header-inner {
+  height: 50px; }
+
+.footer-inner, .footer-nav {
+  max-width: 962px;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=main.css.map */
