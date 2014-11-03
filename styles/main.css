@@ -1,5 +1,7 @@
 body {
-  margin: 0; }
+  margin: 0;
+  background-color: #e7e9ed;
+  position: relative; }
 
 header {
   background-color: #FFFFFF;
@@ -9,7 +11,8 @@ header {
 
 footer {
   overflow: hidden;
-  padding-top: 20px; }
+  padding-top: 20px;
+  background: #FFFFFF; }
 
 .title {
   font-size: 28px;
@@ -48,25 +51,29 @@ footer {
   float: none;
   margin: 0 auto; }
 
-.headerLogo {
-  float: left;
-  display: block;
-  background-position: 0 -39px;
-  height: 50px;
-  width: 169px; }
+.header-logo:hover {
+  opacity: 0.8; }
 
 .header-inner {
-  height: 50px; }
+  height: 50px;
+  background: #F4F7FB; }
 
-.benefits, .footer-inner, .footer-nav, .app-box {
+.stats-inner, .app-box, .benefits-inner, .footer-inner, .footer-nav {
   max-width: 962px;
   margin: 0 auto; }
+
+.stats {
+  height: 108px;
+  background: radial-gradient(ellipse, #e6a124, rgba(255, 123, 12, 0.8)); }
+
+.benefits {
+  background: #FFFFFF; }
 
 .app-box-wrapper {
   background-color: #F4F7FB; }
 
 .app-box {
-  padding: 17px 0 17px 0; }
+  padding: 27px 0 17px 0; }
 
 .app-box-inner {
   display: inline-block;
@@ -105,5 +112,8 @@ footer {
 .apps .btn-store.app-android {
   background-position: -345px -39px;
   width: 177px; }
+
+.apps a:hover {
+  background: url(../img/sprite-h.png); }
 
 /*# sourceMappingURL=main.css.map */
