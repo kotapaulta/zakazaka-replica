@@ -1,5 +1,12 @@
 The project replicates the design of the following website: http://zakazaka.ru using the latest version of Twitter Bootstrap + Sass + jQuery. 
 
+Setup:
+```
+$ git clone git@github.com:kotapaulta/zakazaka-replica.git
+$ cd zakazaka-replica
+$ bower install
+```
+
 All Css and Js files must be maintainable, understandable and concise with short comments if needed. All variables in Sass should be either named appropriately or commented. All the JS components, including carousels, modals, dropdowns, and etc should be working correctly. Font Awesome should be used for icons.
 
 Shadows, textures, and borders has to be implemented as well. 
