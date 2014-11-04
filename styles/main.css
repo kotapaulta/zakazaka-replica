@@ -29,6 +29,9 @@ footer {
   font-size: 18px;
   line-height: 23px; }
 
+.contrast {
+  color: #FFFFFF; }
+
 .border-row {
   border-top: 1px solid #CCCCCC; }
 
@@ -58,7 +61,7 @@ footer {
   height: 50px;
   background: #F4F7FB; }
 
-.stats-inner, .app-box, .benefits-inner, .footer-inner, .footer-nav {
+.stats-inner, .app-box-inner-wrapper, .benefits-inner, .footer-inner, .footer-nav {
   max-width: 962px;
   margin: 0 auto; }
 
@@ -66,13 +69,25 @@ footer {
   height: 108px;
   background: radial-gradient(ellipse, #e6a124, rgba(255, 123, 12, 0.8)); }
 
+.stats-inner {
+  padding-top: 25px; }
+
+.stats-content {
+  overflow: hidden;
+  float: left;
+  display: inline-block; }
+
+.stats-content-text {
+  display: inline-block;
+  padding: 0 25px 0 10px; }
+
 .benefits {
   background: #FFFFFF; }
 
-.app-box-wrapper {
+.app-box {
   background-color: #F4F7FB; }
 
-.app-box {
+.app-box-inner-wrapper {
   padding: 27px 0 17px 0; }
 
 .app-box-inner {
