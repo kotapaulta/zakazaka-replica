@@ -75,9 +75,22 @@ footer {
   height: 50px;
   background: #F4F7FB; }
 
-.stats-inner, .app-box-inner-wrapper, .benefits-inner, .footer-inner, .footer-nav {
+.carousel-stock-inner, .stats-inner, .app-box-inner-wrapper, .benefits-inner, .footer-inner, .footer-nav {
   max-width: 962px;
   margin: 0 auto; }
+
+.carousel-stock-inner {
+  background-color: #fff;
+  border: 1px solid #dfe0e2;
+  max-width: 962px;
+  margin: 12px auto;
+  padding: 17px 28px 24px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
 
 .stats {
   position: relative;
