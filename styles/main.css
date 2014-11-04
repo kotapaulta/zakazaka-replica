@@ -32,6 +32,20 @@ footer {
 .contrast {
   color: #FFFFFF; }
 
+.personage {
+  background: url(../img/personages.png) no-repeat;
+  height: 235px;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  opacity: 1;
+  z-index: 10;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
+
 .border-row {
   border-top: 1px solid #CCCCCC; }
 
@@ -66,6 +80,7 @@ footer {
   margin: 0 auto; }
 
 .stats {
+  position: relative;
   height: 108px;
   background: radial-gradient(ellipse, #e6a124, rgba(255, 123, 12, 0.8)); }
 
@@ -80,6 +95,12 @@ footer {
 .stats-content-text {
   display: inline-block;
   padding: 0 25px 0 10px; }
+
+.stats .personage {
+  background-position: -205px 0;
+  right: 36px;
+  bottom: 0;
+  width: 159px; }
 
 .benefits {
   background: #FFFFFF; }
