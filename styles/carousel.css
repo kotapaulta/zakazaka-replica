@@ -209,4 +209,8 @@
   position: absolute;
   left: -15px; }
 
+.duration span {
+  margin-left: 5px;
+  padding: 4px 0 4px 5px; }
+
 /*# sourceMappingURL=carousel.css.map */
