@@ -25,6 +25,17 @@ footer {
   font-weight: bold;
   padding: 8px 0 15px; }
 
+.banner-header {
+  padding-bottom: 20px;
+  color: #fe9001;
+  text-transform: uppercase;
+  display: block;
+  font-size: 24px;
+  -webkit-margin-before: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold; }
+
 .high-text {
   font-size: 18px;
   line-height: 23px; }
@@ -75,9 +86,28 @@ footer {
   height: 50px;
   background: #F4F7FB; }
 
-.carousel-stock-inner, .stats-inner, .app-box-inner-wrapper, .benefits-inner, .footer-inner, .footer-nav {
+.banner-inner, .carousel-stock-inner, .stats-inner, .app-box-inner-wrapper, .benefits-inner, .footer-inner, .footer-nav {
   max-width: 962px;
   margin: 0 auto; }
+
+.banner-inner {
+  border: 1px solid #dfe0e2;
+  height: 239px;
+  max-width: 962px;
+  margin: 12px auto;
+  padding: 17px 28px 24px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: url(../img/invite-bg.jpg) no-repeat center center; }
+
+.banner-inner p {
+  font-size: 19px;
+  color: #393939;
+  line-height: 21px; }
 
 .carousel-stock-inner {
   background-color: #fff;
