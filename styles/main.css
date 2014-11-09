@@ -116,6 +116,40 @@ footer {
   margin: 0 auto;
   padding: 27px 0 34px; }
 
+.advant-box {
+  display: inline-block;
+  color: #fff;
+  vertical-align: top; }
+
+.advant-box b {
+  font-family: "museobold", Arial, Verdana, Tahoma, sans-serif;
+  font-size: 22px; }
+
+.advant-box p {
+  background: url(../img/advant.png) no-repeat 0 0;
+  font-size: 12px;
+  height: 56px;
+  padding: 5px 20px 0 70px;
+  margin-top: 10px; }
+
+.advant-box.b1 {
+  width: 40%; }
+
+.advant-box.b1 p {
+  background-position: 0 0; }
+
+.advant-box.b2 {
+  width: 34%; }
+
+.advant-box.b2 p {
+  background-position: 0 -56px; }
+
+.advant-box.b3 {
+  width: 25%; }
+
+.advant-box.b3 p {
+  background-position: 0 -112px; }
+
 .banner-inner {
   border: 1px solid #dfe0e2;
   height: 239px;
