@@ -1,3 +1,10 @@
+a {
+  text-decoration: none;
+  color: #000; }
+
+a:hover {
+  text-decoration: none; }
+
 body {
   margin: 0;
   background-color: #e7e9ed;
@@ -150,6 +157,14 @@ footer {
 .advant-box.b3 p {
   background-position: 0 -112px; }
 
+.tabs .tab {
+  visibility: hidden;
+  display: none; }
+
+.tabs .tab.visible {
+  visibility: visible;
+  display: block; }
+
 .promo-inner .btn-tabs {
   text-align: center;
   padding-top: 13px;
@@ -209,6 +224,7 @@ footer {
   vertical-align: middle;
   padding-top: 7px;
   position: relative;
+  overflow: hidden;
   z-index: 2;
   box-shadow: 0;
   -webkit-box-sizing: border-box;
