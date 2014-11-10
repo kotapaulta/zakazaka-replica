@@ -113,7 +113,56 @@
               <h3>Весь каталог</h3>
             </a>
           </div>
-          <div class="form"></div>
+          <div class="form">
+            <form method="get" action="/restaurants" onsubmit="return restSearchForm(false);" id="searchForm">
+              <div class="field kitchens">
+                <span class="label">Название Кухни</span>
+                <select name="cuisine">
+                  <option value="">-----</option>
+                  <option value="usa">Американская</option>
+                  <option value="burger">Бургеры</option>
+                  <option value="cuisine-europe">Европейская</option>
+                  <option value="italy">Итальянская</option>
+                  <option value="kavkaz">Кавказская</option>
+                  <option value="cuisine-chinese">Китайская</option>
+                  <option value="mexico">Мексиканская</option>
+                  <option value="desert">Пироги</option>
+                  <option value="pizza">Пицца</option>
+                  <option value="cuisine-rus">Русская</option>
+                  <option value="sushi">Суши</option>
+                  <option value="uzbek">Узбекская</option>
+                  <option value="shashlik">Шашлыки</option>
+                  <option value="ecsotic">Экзотическая</option>
+                  <option value="cuisine-japan">Японская</option>
+                </select>
+              </div>
+              <div class="field price">
+                <span class="label">Минимальный чек</span>
+                <select name="check">
+                  <option value="">-----</option>
+                  <option value="500">До 500р.</option>
+                  <option value="1000">До 1000р.</option>
+                  <option value="2000">До 2000р.</option>
+                  <option value="2001">Больше 2000р.</option>
+                </select>
+              </div>
+              <div class="switch">
+                <span class="label">Еда за баллы</span>
+                <label class="switch-off"><input type="radio" name="bonus" value="off"><span>Нет</span></label>
+                <label class="switch-on"><input type="radio" name="bonus" value="on"><span>Да</span></label>
+              </div>
+              <div class="button">
+                <button class="btn btn-success" type="submit">Найти ресторан</button>
+              </div>
+              <div class="button">
+                <button class="btn btn-info" onclick="return randomSearch();">Наугад</button>
+              </div>
+              <div class="example">
+                Например:
+                <a href="#" data-value="sushi">Суши</a>, <a href="#" data-value="pizza">Пицца</a>
+              </div>
+            </form>
+          </div>
         </div>
         <div class="tab tab-product">
           <div class="items">
@@ -364,7 +413,9 @@
         </p>
       </li>
       <li>
-        <span class="small-title"><i class="fa fa-check-circle-o small-title"></i> ДОСТАВКА ЕДЫ ИЗ&nbsp;РЕСТОРАНОВ: ПОЧЕМУ ЭТО ВЫГОДНО?</span>
+        <span class="small-title">
+          <i class="fa fa-check-circle-o small-title"></i> ДОСТАВКА ЕДЫ ИЗ&nbsp;РЕСТОРАНОВ: ПОЧЕМУ ЭТО ВЫГОДНО?
+        </span>
         <p class="small text-muted">
           Наш сервис предлагает специальные программы для постоянных клиентов, а&nbsp;также непрерывно отслеживает
           различные акции и&nbsp;скидки. Потому вы&nbsp;сможете ловить самые выгодные предложения! Мы&nbsp;работаем

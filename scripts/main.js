@@ -21,6 +21,13 @@ $(document).ready(function(){
       .siblings(".tab");
   });
 
+  /*  EXAMPLE SELECT  */
+  $(".example a").click(function(element) {
+    element.preventDefault();
+    $('.kitchens select [value="' + $(this).attr("data-value") + '"]').attr("selected", "selected");
+    $(".kitchens select").trigger("change").trigger("refresh");
+  });
+
 
   /*  CAROUSEL  */
   if ($(".carousel-stock").length) {
