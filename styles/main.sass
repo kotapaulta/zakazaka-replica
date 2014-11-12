@@ -5,6 +5,14 @@ a
 a:hover
   text-decoration: none
 
+ul,ol
+  list-style: none
+  margin: 0
+  padding: 0
+
+label
+  margin-bottom: 0
+
 body
   margin: 0
   background-color: #e7e9ed
@@ -99,6 +107,369 @@ footer
   max-width: 962px
   margin: 0 auto
 
+.nav-top .place 
+  float: left
+  line-height: 55px
+  
+
+.nav-top .place span 
+  color: #898b93
+  margin-right: 16px
+  line-height: 38px
+  display: inline-block
+  padding-left: 15px
+  
+
+.nav-top .place span.icon 
+  padding-left: 35px
+  
+
+.nav-top .place span:after 
+  content: ''
+  background: url(../img/sprite.png) no-repeat -50px -29px
+  width: 10px
+  height: 8px
+  display: inline-block
+  opacity: 1
+  -webkit-transition: opacity .25s ease-in-out
+  -moz-transition: opacity .25s ease-in-out
+  -ms-transition: opacity .25s ease-in-out
+  -o-transition: opacity .25s ease-in-out
+  transition: opacity .25s ease-in-out
+  
+
+.nav-top .place span:hover 
+  cursor: pointer
+  
+
+.nav-top .place span:hover:after 
+  opacity: .5
+  
+
+.nav-top .place i 
+  margin-right: 7px
+  
+
+.nav-top .authoriz 
+  float: right
+  
+
+.nav-top .authoriz a 
+  display: inline-block
+  color: #898b93
+  height: 55px
+  line-height: 55px
+  padding: 0 15px
+  background-color: rgba(0,0,0,0)
+  -webkit-transition: background-color .5s
+  -moz-transition: background-color .5s
+  transition: background-color .5s
+  text-decoration: none
+  
+
+.nav-top .authoriz a.icon 
+  padding: 0 15px 0 46px
+  
+
+.nav-top .authoriz a:before 
+  opacity: 1
+  -webkit-transition: opacity .25s ease-out
+  -moz-transition: opacity .25s ease-out
+  -ms-transition: opacity .25s ease-out
+  -o-transition: opacity .25s ease-out
+  transition: opacity .25s ease-out
+  
+
+.nav-top .authoriz a.reg:before 
+  background-position: -188px 0
+  width: 26px
+  height: 27px
+  vertical-align: middle
+  margin-top: -13px
+  left: 12px
+  top: 50%
+  
+
+.nav-top .authoriz a.signin:before 
+  background-position: -214px 0
+  width: 20px
+  height: 26px
+  vertical-align: middle
+  margin-top: -13px
+  left: 12px
+  top: 50%
+  
+
+.nav-top .authoriz a:hover 
+  background-color: #eaebf2
+  
+
+.nav-top .authoriz a:hover:before 
+  opacity: .5
+  
+
+.nav-top .city:before 
+  background-position: -61px 0
+  width: 21px
+  height: 25px
+  opacity: 1
+  left: 5px
+  top: 7px
+  -webkit-transition: opacity .25s ease-in-out
+  -moz-transition: opacity .25s ease-in-out
+  -ms-transition: opacity .25s ease-in-out
+  -o-transition: opacity .25s ease-in-out
+  transition: opacity .25s ease-in-out
+  
+
+.nav-top .city:hover:before 
+  opacity: .5
+  
+
+.nav-top .metro:before,.nav-top .district:before 
+  width: 27px
+  height: 28px
+  opacity: 1
+  left: 0
+  top: 7px
+  -webkit-transition: opacity .25s ease-in-out
+  -moz-transition: opacity .25s ease-in-out
+  -ms-transition: opacity .25s ease-in-out
+  -o-transition: opacity .25s ease-in-out
+  transition: opacity .25s ease-in-out
+  
+
+.nav-top .metro:hover:before,.nav-top .district:hover:before 
+  opacity: .5
+  
+
+.nav-top .metro:before 
+  background-position: -82px 0
+  
+
+.nav-top .district:before 
+  background-position: -635px 0
+  
+
+.nav-top i 
+  font-style: normal
+  border-bottom: 1px dotted #50535e
+  
+
+#location-notify 
+  background-color: #FFF
+  text-align: center
+  padding: 18px 30px
+  color: #838383
+  line-height: 18px
+  position: absolute
+  top: 60px
+  left: -11px
+  border: 1px solid #c7c7c7
+  width: 280px
+  opacity: 0
+  display: none
+  z-index: 100
+  -webkit-transition: opacity .3s
+  -moz-transition: opacity .3s
+  transition: opacity .3s
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-border-radius: 3px
+  -moz-border-radius: 3px
+  border-radius: 3px
+  -webkit-box-shadow: rgba(0,0,0,0.3) 0 2px 13px
+  -moz-box-shadow: rgba(0,0,0,0.3) 0 2px 13px
+  box-shadow: rgba(0,0,0,0.3) 0 2px 13px
+  
+
+#location-notify strong 
+  display: inline-block
+  color: #000
+  margin-bottom: 18px
+  
+
+#location-notify:before 
+  background: url(../img/angle.png) no-repeat
+  content: ''
+  display: inline-block
+  height: 23px
+  position: absolute
+  top: -23px
+  left: 0
+  width: 50px
+  
+
+#location-notify.visible 
+  opacity: 1
+  z-index: 95
+  
+.place-dropdown 
+  display: inline-block
+  position: relative
+  margin: 0 auto
+  outline: 0
+  -webkit-transition: width .6s ease-out
+  -moz-transition: width .6s ease-out
+  -ms-transition: width .6s ease-out
+  -o-transition: width .6s ease-out
+  transition: width .6s ease-out
+  
+
+.place-dropdown input 
+  width: 0
+  height: 0
+  visibility: hidden
+  
+
+.place-dropdown .dropdown,.dd-user-nav,.dd-msg,.dd-bkm 
+  position: absolute
+  top: 60px
+  margin-top: 1px
+  z-index: 1000
+  border: 1px solid #c7c7c7
+  background: white
+  border-top: 0
+  display: none
+  -webkit-border-radius: 3px
+  -moz-border-radius: 3px
+  border-radius: 3px
+  -webkit-box-shadow: rgba(0,0,0,0.3) 0 2px 13px
+  -moz-box-shadow: rgba(0,0,0,0.3) 0 2px 13px
+  box-shadow: rgba(0,0,0,0.3) 0 2px 13px
+  -webkit-transition: opacity .3s ease-out
+  -moz-transition: opacity .3s ease-out
+  -ms-transition: opacity .3s ease-out
+  -o-transition: opacity .3s ease-out
+  transition: opacity .3s ease-out
+  
+
+.place-dropdown .dropdown:hover,.dd-user-nav:hover,.dd-msg:hover,.dd-bkm:hover 
+  cursor: pointer
+  
+
+.place-dropdown .dropdown:before,.dd-user-nav:before,.dd-msg:before,.dd-bkm:before 
+  content: ''
+  background: url(../img/angle.png) no-repeat
+  width: 50px
+  height: 23px
+  display: inline-block
+  top: -23px
+  position: absolute
+  
+
+.place-dropdown .dropdown 
+  left: -11px
+  
+
+.dd-bkm,.dd-msg 
+  right: -11px
+  
+
+.dd-user-nav 
+  right: -20px
+  
+
+.dd-msg,.dd-bkm 
+  width: 294px
+  
+
+.dd-msg:before,.dd-bkm:before,.dd-user-nav:before 
+  right: 0
+  
+
+.place-dropdown .dropdown 
+  width: 252px
+  
+
+.place-dropdown .dropdown-scroll 
+  padding: 6px 0
+  max-height: 276px
+  overflow-y: auto
+  overflow-x: hidden
+  
+
+.place-dropdown .dropdown-list li,.user-persone .dropdown-list li 
+  color: #898b93
+  padding: 0 14px
+  height: 35px
+  line-height: 35px
+  white-space: nowrap
+  
+
+.place-dropdown .dropdown-list a,.user-persone .dropdown-list a 
+  color: #898b93
+  
+
+.dropdown-list .item 
+  overflow: hidden
+  padding: 14px 0
+  
+
+.dropdown-list .item .img 
+  border: 1px solid #d5d5d5
+  float: left
+  width: 43px
+  height: 43px
+  
+
+.dropdown-list .item .info 
+  padding-left: 59px
+  
+
+.dropdown-list .item .info a 
+  border-bottom: 1px solid #d5d5d5
+  color: #898b93
+  font-size: 12px
+  line-height: 13px
+  margin-top: 4px
+  
+
+.dropdown-list .item .info a:hover 
+  border-color: #FFF
+  
+
+.dropdown-list li 
+  font-size: 14px
+  position: relative
+  border-left: 2px solid transparent
+  
+
+.dropdown-list li .remove 
+  display: none
+  position: absolute
+  top: 17px
+  right: 19px
+  width: 8px
+  height: 10px
+  
+
+.dropdown-list li .remove:before 
+  background-position: -119px -28px
+  width: 8px
+  height: 10px
+  line-height: 10px
+  
+
+.dropdown-list li:hover 
+  background-color: #e6ebf2
+  border-left-color: #c2c8d0
+  
+
+.dropdown-list li:hover .remove 
+  display: inline-block
+  
+
+.place-dropdown .dropdown-list .jq-radio__div 
+  margin-right: 9px
+  
+
+.place-dropdown .dropdown-list li label 
+  display: block
+    
+  
+  
 .promo
   position: relative
   height: 564px
@@ -166,6 +537,54 @@ footer
   visibility: visible
   display: block
 
+.jq-checkbox
+  top: -1px
+  vertical-align: middle
+  cursor: pointer
+
+
+.jq-checkbox .jq-checkbox__div
+  background: url(../img/checkbox.png) no-repeat 0 -1px
+  width: 19px
+  height: 18px
+
+
+.jq-checkbox.checked .jq-checkbox__div
+  background-position: -19px -1px
+
+
+.jq-checkbox.focused
+  border: 1px solid #08C
+
+
+.jq-checkbox.disabled
+  opacity: .55
+  filter: alpha(opacity=55)
+
+
+.jq-radio
+  vertical-align: middle
+  cursor: pointer
+
+
+.jq-radio .jq-radio__div
+  background: url(../img/checkbox.png) no-repeat -39px 0
+  width: 19px
+  height: 20px
+
+
+.jq-radio.checked .jq-radio__div
+  background-position: -60px 0
+
+
+.jq-radio.focused
+  border: 1px solid #08C
+
+
+.jq-radio.disabled
+  opacity: .55
+  filter: alpha(opacity=55)
+  
 
 .switch
   position: relative
@@ -254,7 +673,7 @@ footer
 
 .switch .jq-radio__div
   display: none
-
+  
 .promo-inner .form .field, .promo-inner .form .button, .promo-inner .form .switch
   display: inline-block
   margin-right: 4px

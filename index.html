@@ -54,8 +54,44 @@
 <nav class="nav-top">
   <div class="header-inner box-shadow">
     <div class="place">
-      <div class="place-city"></div>
-      <div class="place-district"></div>
+      <div class="js-dd-pnt place-dropdown" id="selectCity">
+        <span class="js-dd-trig city icon"><i>Москва</i></span>
+        <div class="js-dd dropdown">
+          <div class="dropdown-scroll">
+            <ul class="dropdown-list">
+              <li><label><input type="radio" value="http://spb.zakazaka.ru" name="city">Санкт-Петербург</label></li>
+              <li><label><input type="radio" checked="" value="http://zakazaka.ru" name="city">Москва</label></li>
+              <li><label><input type="radio" value="http://nn.zakazaka.ru" name="city">Нижний Новгород</label></li>
+              <li><label><input type="radio" value="http://ekb.zakazaka.ru" name="city">Екатеринбург</label></li>
+              <li><label><input type="radio" value="http://mo.zakazaka.ru" name="city">Московская область</label></li>
+              <li><label><input type="radio" value="http://nsk.zakazaka.ru" name="city">Новосибирск</label></li>
+              <li><label><input type="radio" value="http://kzn.zakazaka.ru" name="city">Казань</label></li>
+            </ul>
+          </div>
+        </div>
+        <div id="location-notify">
+          <div class="text">Ваш город <br><strong></strong></div>
+          <button class="btn green">Да</button>
+          <button class="btn grey">Нет</button>
+        </div>
+      </div>
+      <div class="js-dd-pnt place-dropdown" id="selectDistr">
+        <span class="js-dd-trig metro icon"><i>Весь город</i></span>
+        <div class="js-dd dropdown">
+          <div class="dropdown-scroll">
+            <ul class="dropdown-list">
+              <li><label><input type="radio" data-code="aviamotornaya" value="306" name="district">Авиамоторная</label></li>
+              <li><label><input type="radio" data-code="avtozavodskaya" value="216" name="district">Автозаводская</label></li>
+              <li><label><input type="radio" data-code="akademicheskaya-msk" value="276" name="district">Академическая</label></li>
+              <li><label><input type="radio" data-code="aleksandrovskiy-sad" value="247" name="district">Александровский сад</label></li>
+              <li><label><input type="radio" data-code="alekseevskaya" value="268" name="district">Алексеевская</label></li>
+              <li><label><input type="radio" data-code="alma-atinskaya" value="366" name="district">Алма-Атинская</label></li>
+              <li><label><input type="radio" data-code="altufevo" value="310" name="district">Алтуфьево</label></li>
+              <li><label><input type="radio" data-code="annino" value="331" name="district">Аннино</label>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="authorization"></div>
   </div>

@@ -5,6 +5,36 @@ $(document).ready(function(){
 
   $('input, select').styler();
 
+  $(".js-dd-trig").on("click", function() {
+    var element = $(this).next(".js-dd");
+    if (element.hasClass("open")) {
+      element.hide().removeClass("open");
+    } else {
+      $(".js-dd").hide().removeClass("open");
+      element.show().addClass("open");
+    }
+    return false;
+  });
+
+  $(document).on("click", function(k) {
+    if ($(k.target).closest(".user-panel .open").length) {
+      return
+    }
+    $(".user-panel .open").hide().removeClass("open");
+    k.stopPropagation();
+    if ($(k.target).closest(".place .open").length) {
+      return
+    }
+    $(".place .open").hide().removeClass("open");
+    k.stopPropagation();
+    if ($(k.target).closest(".cart-panel .open").length) {
+      return
+    }
+    $(".cart-panel .open").hide().removeClass("open");
+    $(".cart-bkm a").removeClass("active");
+    k.stopPropagation()
+  });
+
   /*  TABS  */
   $(".btn-tab").on("click", function(element) {
     element.preventDefault();
