@@ -91,6 +91,14 @@ footer {
   display: inline-block;
   position: absolute; }
 
+.header-inner, .promo-inner, .banner-inner, .carousel-stock-inner, .stats-inner, .app-box-inner-wrapper, .benefits-inner, .footer-inner, .footer-nav {
+  max-width: 962px;
+  margin: 0 auto; }
+
+.nav-top .place {
+  float: left;
+  line-height: 55px; }
+
 .col-centered {
   float: none;
   margin: 0 auto; }
@@ -102,13 +110,67 @@ footer {
   height: 50px;
   background: #F4F7FB; }
 
-.promo-inner, .banner-inner, .carousel-stock-inner, .stats-inner, .app-box-inner-wrapper, .benefits-inner, .footer-inner, .footer-nav {
-  max-width: 962px;
-  margin: 0 auto; }
+.search-bar, .search-bar-mini {
+  line-height: 39px; }
 
-.nav-top .place {
-  float: left;
-  line-height: 55px; }
+.search-bar .button, .search-bar-mini .button {
+  position: absolute;
+  bottom: 1px; }
+
+.search-bar button, .search-bar-mini button {
+  border: 0;
+  background: 0;
+  width: 39px;
+  height: 38px;
+  padding: 0;
+  vertical-align: middle; }
+
+.search-bar button:before, .search-bar-mini button:before {
+  background-position: 0 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0; }
+
+.search-bar input.styler[type="text"], .search-bar-mini input.styler[type="text"] {
+  -webkit-border-radius: 39px;
+  -moz-border-radius: 39px;
+  border-radius: 39px; }
+
+.search-bar {
+  position: relative;
+  max-width: 910px;
+  top: 35px;
+  left: 30px; }
+
+.search-bar .button {
+  left: 0; }
+
+.search-bar input.styler[type="text"] {
+  width: 100%;
+  padding-left: 140px; }
+
+.search-bar .legend {
+  position: absolute;
+  left: 50px;
+  color: #898b93;
+  font-size: 16px; }
+
+.search-bar-mini {
+  width: 290px;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  margin-left: -145px; }
+
+.search-bar-mini .button {
+  right: 0; }
+
+.search-bar-mini input.styler[type="text"] {
+  width: 100%;
+  padding-left: 25px;
+  color: #898b93;
+  font-size: 13px; }
 
 .nav-top .place span {
   color: #898b93;
@@ -232,6 +294,10 @@ footer {
 .nav-top i {
   font-style: normal;
   border-bottom: 1px dotted #50535e; }
+
+.nav-top .fa {
+  font-size: 20px;
+  border-bottom: none; }
 
 #location-notify {
   background-color: #FFF;
@@ -525,6 +591,7 @@ footer {
 
 .switch {
   position: relative;
+  height: 66px;
   width: 142px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;

@@ -16,23 +16,30 @@ $(document).ready(function(){
     return false;
   });
 
-  $(document).on("click", function(k) {
-    if ($(k.target).closest(".user-panel .open").length) {
-      return
+  $(".js-dd-pnt").find(".dropdown-list > li input").on("change", function() {
+    var element = $(this).closest("li"),
+      name = $(this).attr("name");
+    element.parents(".js-dd-pnt").find(".js-dd-trig").find(".place-name").text(element.text());
+    $(".js-dd").hide().removeClass("open");
+  });
+
+  $(document).on("click", function(element) {
+    if ($(element.target).closest(".user-panel .open").length) {
+      return;
     }
     $(".user-panel .open").hide().removeClass("open");
-    k.stopPropagation();
-    if ($(k.target).closest(".place .open").length) {
-      return
+    element.stopPropagation();
+    if ($(element.target).closest(".place .open").length) {
+      return;
     }
     $(".place .open").hide().removeClass("open");
-    k.stopPropagation();
-    if ($(k.target).closest(".cart-panel .open").length) {
-      return
+    element.stopPropagation();
+    if ($(element.target).closest(".cart-panel .open").length) {
+      return;
     }
     $(".cart-panel .open").hide().removeClass("open");
     $(".cart-bkm a").removeClass("active");
-    k.stopPropagation()
+    element.stopPropagation();
   });
 
   /*  TABS  */
