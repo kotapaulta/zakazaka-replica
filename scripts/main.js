@@ -5,6 +5,33 @@ $(document).ready(function(){
 
   $('input, select').styler();
 
+  var i = $(window).height(), a = $(window).width();
+  if ($("input, select").length) {
+    $("input, select").styler({
+      selectSearch: true,
+      singleSelectzIndex: 10,
+      selectSmartPositioning: false
+    });
+  }
+  if ($(".modalLink").length) {
+    $(".modalLink").modal({
+      trigger: ".modalLink",
+      olay: ".overlay",
+      modals: ".custom-modal",
+      animationEffect: "fadeIn",
+      animationSpeed: 400,
+      moveModalSpeed: "slow",
+      background: "2E2F2F",
+      opacity: 0.7,
+      openOnLoad: false,
+      docClose: true,
+      closeByEscape: true,
+      moveOnScroll: true,
+      resizeWindow: false,
+      close: ".close-custom-modal, button.grey"
+    });
+  }
+
   $(".js-dd-trig").on("click", function() {
     var element = $(this).next(".js-dd");
     if (element.hasClass("open")) {
@@ -82,6 +109,32 @@ $(document).ready(function(){
       hideControlOnEnd: true,
       speed: 400
     });
+  }
+
+
+  function userLogin() {
+    var a = {};
+    $("#msignin input").each(function() {
+      if ($(this).val() === "") {
+        return false;
+      }
+      a[$(this).attr("name")] = $(this).val();
+    });
+    $.post("/ajax?action=userLogin", a, function(b) {
+      if (b === "true") {
+        location.reload();
+      } else {
+        if (b === "false") {
+          b = "Произошла ошибка, <br> попробуйте повторить запрос.";
+        }
+        $(".authoriz a.signin").click();
+        $("#msignin .registration").hide();
+        $("#msignin .error").html(b);
+        $("#msignin .error").slideDown();
+      }
+    });
+    $("#mloader .modalLink").click();
+    return false;
   }
 });
 

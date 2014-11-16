@@ -18,6 +18,7 @@
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="scripts/jquery.formstyler.js"></script>
+  <script src="scripts/jquery.modal.min.js"></script>
 
   <script src="scripts/jquery.easing.1.3.js"></script>
   <script src="scripts/jquery.fitvids.js"></script>
@@ -516,13 +517,98 @@
       <div class="row">
         <div class="feedback-link">
           <a href="#mfeedback" class="modalLink">
-            <i class="fa fa-comment"></i> <b>Написать нам</b>
+            <i class="fa fa-comment text-muted"></i> <span>Написать нам</span>
           </a>
         </div>
       </div>
     </div>
   </div>
 </footer>
+
+<!-------------------------->
+<!--        MODALS        -->
+<!-------------------------->
+
+
+<!--        REGISTRATION        -->
+<div id="mreg" class="custom-modal custom-modal-reg">
+  <div class="form-reg">
+    <span class="close-custom-modal">Закрыть</span>
+    <div class="form">
+      <div class="custom-modal-title">Регистрация</div>
+      <form onsubmit="return userReg();">
+        <div class="field icon email">
+          <input class="styler" required="" type="email" name="email" placeholder="Email">
+        </div>
+        <div class="field icon name">
+          <input class="styler" required="" type="text" name="name" placeholder="Имя">
+        </div>
+        <div class="field icon pass">
+          <input class="styler" required="" type="password" name="password" placeholder="Пароль">
+        </div>
+        <div class="field icon tel">
+          <input class="styler" required="" type="tel" name="phone" placeholder="Телефон">
+        </div>
+        <div class="accept">
+          <label><input type="checkbox" required="">Я принимаю</label>
+          <br><a href="/agreement">Условия пользовательского соглашения.</a>
+        </div>
+        <div class="field error"></div>
+        <div class="button">
+          <button class="btn green" type="submit">Зарегистрироваться</button>
+        </div>
+      </form>
+    </div>
+    <div class="social-auth">
+      <span>Используя аккаунт из социальной сети</span>
+      <div class="social-auth-btn">
+        <a title="ВКонтакте" href="/oauth/vk" target="_top" class="vk">ВКонтакте</a>
+        <a title="Facebook" href="/oauth/facebook" target="_top" class="fb">Facebook</a>
+        <a title="Mail.Ru" href="/oauth/mailru" target="_top" class="mr">Mail.Ru</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--        SIGN IN        -->
+<div id="msignin" class="custom-modal custom-modal-signin">
+  <div class="form-signin">
+    <span class="close-custom-modal">Закрыть</span>
+    <div class="form">
+      <div class="custom-modal-title">Вход</div>
+      <form onsubmit="return userLogin();">
+        <div class="field icon email">
+          <input class="styler" required="" type="email" name="email" placeholder="Email">
+        </div>
+        <div class="field icon pass">
+          <input class="styler" required="" type="password" name="password" placeholder="Пароль">
+        </div>
+        <div class="field error"></div>
+        <div class="buttons">
+          <a class="recover-link modalLink" href="#mrecover">Забыли пароль?</a>
+          <div class="button">
+            <button class="btn green" type="submit">Войти</button>
+          </div>
+          <div class="registration">
+            Ещё не с нами?
+            <a class="modalLink" href="#mreg">Зарегистрируйтесь!</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="social-auth">
+      <span>Используя аккаунт из социальной сети</span>
+      <div class="social-auth-btn">
+        <a title="ВКонтакте" href="/oauth/vk" target="_top" class="vk">ВКонтакте</a>
+        <a title="Facebook" href="/oauth/facebook" target="_top" class="fb">Facebook</a>
+        <a title="Mail.Ru" href="/oauth/mailru" target="_top" class="mr">Mail.Ru</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay"></div>
 
 </div>
 </body>
