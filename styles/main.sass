@@ -1,3 +1,9 @@
+$banner-header-color: #CF0202
+$main-gradient-start: #E40000
+$main-gradient-end: rgba(77, 4, 4, 0.8)
+
+$main-lighting-border: #b70600
+$main-lighting-light: rgba(255, 122, 88, 0.30)
 a
   text-decoration: none
   color: #000
@@ -19,10 +25,11 @@ body
   position: relative
 
 header
-  background-color: #FFFFFF
+  max-height: 80px
   overflow: hidden
   padding: 16px 0 12px
   text-align: center
+  background-color: #FFFFFF
 
 footer
   overflow: hidden
@@ -40,9 +47,12 @@ footer
   font-weight: bold
   padding: 8px 0 15px
 
+.inlineBlock
+  display: inline-block
+
 .banner-header
   padding-bottom: 20px
-  color: #fe9001
+  color: $banner-header-color
   text-transform: uppercase
   display: block
   font-size: 24px
@@ -106,6 +116,9 @@ footer
 
 .header-logo:hover
   opacity: .8
+
+.header-logo img
+  max-height: 50px
 
 .header-inner
   height: 50px
@@ -551,7 +564,7 @@ footer
   position: relative
   height: 564px
   margin-bottom: 30px
-  background: radial-gradient(ellipse, #e6a124, rgba(255, 123, 12, 0.8))
+  background: radial-gradient(ellipse, $main-gradient-start, $main-gradient-end)
 
 .promo .personage
   width: 205px
@@ -560,7 +573,7 @@ footer
   background-position: 0 0
 
 .promo-bg-form
-  background: url(../img/food-bg1.png) no-repeat center 137px
+  background: url(../img/food-bg.png) no-repeat center 137px
   height: 100%
 
 .promo-inner
@@ -581,11 +594,14 @@ footer
   font-family: 'museobold',Arial,Verdana,Tahoma,sans-serif
   font-size: 22px
 
+.advant-box i
+  font-size: 50px
+  padding-top: 15px
+  padding-right: 0px
+
 .advant-box p
-  background: url(../img/advant.png) no-repeat 0 0
   font-size: 12px
   height: 56px
-  padding: 5px 20px 0 70px
   margin-top: 10px
 
 .advant-box.b1
@@ -605,6 +621,17 @@ footer
 
 .advant-box.b3 p
   background-position: 0 -112px
+
+.advant-box-logo
+  height: 80px
+  width: 50px
+  text-align: center
+  vertical-align: top
+
+
+.advant-box-text
+  width: 220px
+  padding-left: 10px
 
 .tabs .tab
   visibility: hidden
@@ -891,10 +918,10 @@ footer
   white-space: nowrap
 
 .promo-inner .tab .item:hover
-  border-color: #f8981d
-  -webkit-box-shadow: #f8981d 0 0 0 1px,rgba(255,168,45,0.3) 0 0 11px
-  -moz-box-shadow: #f8981d 0 0 0 1px,rgba(255,168,45,0.3) 0 0 11px
-  box-shadow: #f8981d 0 0 0 1px,rgba(255,168,45,0.3) 0 0 11px
+  border-color: $main-lighting-border
+  -webkit-box-shadow: $main-lighting-border 0 0 0 1px,$main-lighting-light 0 0 11px
+  -moz-box-shadow: $main-lighting-border 0 0 0 1px,$main-lighting-light 0 0 11px
+  box-shadow: $main-lighting-border 0 0 0 1px, $main-lighting-light 0 0 11px
 
 .banner-inner
   border: 1px solid #dfe0e2
@@ -931,7 +958,7 @@ footer
 .stats
   position: relative
   height: 108px
-  background: radial-gradient(ellipse, #e6a124, rgba(255, 123, 12, 0.8))
+  background: radial-gradient(ellipse, $main-gradient-start, $main-gradient-end)
 
 .stats-inner
   padding-top: 25px
