@@ -4,6 +4,10 @@ $main-gradient-end: rgba(77, 4, 4, 0.8)
 
 $main-lighting-border: #b70600
 $main-lighting-light: rgba(255, 122, 88, 0.30)
+
+$main-font: 14px Arial,Verdana,Tahoma,sans-serif
+$advant-box-font-family: 'museobold',TimesNewRoman,Verdana,Tahoma,sans-serif
+
 a
   text-decoration: none
   color: #000
@@ -23,6 +27,7 @@ body
   margin: 0
   background-color: #e7e9ed
   position: relative
+  font: $main-font
 
 header
   max-height: 80px
@@ -591,7 +596,7 @@ footer
   vertical-align: top
 
 .advant-box b
-  font-family: 'museobold',Arial,Verdana,Tahoma,sans-serif
+  font-family: $advant-box-font-family
   font-size: 22px
 
 .advant-box i
@@ -815,6 +820,7 @@ footer
 
 
 .promo-inner .button button
+  height: 40px
   width: 100%
 
 .promo-inner .example

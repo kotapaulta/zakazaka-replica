@@ -108,10 +108,10 @@
   opacity: 0.8; }
 
 .carousel-stock .item:hover {
-  border-color: #f8981d;
-  -webkit-box-shadow: #f8981d 0 0 0 1px, rgba(255, 168, 45, 0.3) 0 0 11px;
-  -moz-box-shadow: #f8981d 0 0 0 1px, rgba(255, 168, 45, 0.3) 0 0 11px;
-  box-shadow: #f8981d 0 0 0 1px, rgba(255, 168, 45, 0.3) 0 0 11px; }
+  border-color: #b70600;
+  -webkit-box-shadow: #b70600 0 0 0 1px, rgba(255, 122, 88, 0.3) 0 0 11px;
+  -moz-box-shadow: #b70600 0 0 0 1px, rgba(255, 122, 88, 0.3) 0 0 11px;
+  box-shadow: #b70600 0 0 0 1px, rgba(255, 122, 88, 0.3) 0 0 11px; }
 
 .carousel-stock .item:hover h3 {
   border-color: #d5d5d5; }

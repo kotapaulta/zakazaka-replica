@@ -16,7 +16,8 @@ label {
 body {
   margin: 0;
   background-color: #e7e9ed;
-  position: relative; }
+  position: relative;
+  font: 14px Arial, Verdana, Tahoma, sans-serif; }
 
 header {
   max-height: 80px;
@@ -521,7 +522,7 @@ footer {
   vertical-align: top; }
 
 .advant-box b {
-  font-family: "museobold", Arial, Verdana, Tahoma, sans-serif;
+  font-family: "museobold", TimesNewRoman, Verdana, Tahoma, sans-serif;
   font-size: 22px; }
 
 .advant-box i {
@@ -722,6 +723,7 @@ footer {
   white-space: nowrap; }
 
 .promo-inner .button button {
+  height: 40px;
   width: 100%; }
 
 .promo-inner .example {
