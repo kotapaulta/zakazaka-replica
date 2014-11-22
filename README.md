@@ -4,6 +4,8 @@ The project replicates the design of the following website: http://zakazaka.ru u
 
 <b>Restaurants list:</b> restaurants.html
 
+<b>Checkout empty:</b> empty-cart.html
+
 Setup:
 ```
 $ git clone git@github.com:kotapaulta/zakazaka-replica.git
