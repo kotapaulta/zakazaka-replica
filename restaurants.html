@@ -148,17 +148,220 @@
       </div>
     </div>
 </section>
-
 <div class="breadcrumbs box-shadow">
   <div class="inner">
     <ul>
       <li><a href="/">ZakaZaka</a></li> <span>→</span>
       <span>Доставка еды</span>
-
     </ul>
   </div>
 </div>
 
+<!--        RESTAURANTS       -->
+<section class="s-restaurants" id="contentBox">
+  <div class="inner">
+    <div class="cb-side">
+      <div class="row equal">
+        <div class="col-md-3 catalog-filter-wrapper">
+          <div class="catalog-filter" id="searchForm">
+            <div class="field sel-gray">
+              <span class="label">Категория</span>
+              <select name="cuisine" onchange="restSearchForm(true);">
+                <option value="">-----</option>
+                <option value="sushi">Суши</option><option value="pizza">Пицца</option><option value="shashlik">Шашлыки</option><option value="desert">Пироги</option><option value="burger">Бургеры</option><option value="usa">Американская</option><option value="cuisine-europe">Европейская</option><option value="italy">Итальянская</option><option value="kavkaz">Кавказская</option><option value="cuisine-chinese">Китайская</option><option value="mexico">Мексиканская</option><option value="cuisine-rus">Русская</option><option value="uzbek">Узбекская</option><option value="ecsotic">Экзотическая</option><option value="cuisine-japan">Японская</option>
+              </select>
+            </div>
+            <div class="field">
+              <span class="label">Минимальная сумма заказа</span>
+              <select name="check" onchange="restSearchForm(true);">
+                <option value="">-----</option>
+                <option value="500">До 500р.</option>
+                <option value="1000">До 1000р.</option>
+                <option value="2000">До 2000р.</option>
+                <option value="2001">Больше 2000р.</option>
+              </select>
+            </div>
+            <div class="field">
+              <span class="label">Время доставки</span>
+              <select name="time" onchange="restSearchForm(true);">
+                <option value="">-----</option>
+                <option value="30">До 2-х часов</option>
+                <option value="20">До 1,5 часов</option>
+                <option value="10">До 1 часа</option>
+                <option value="0">До 30 минут</option>
+                <option value="40">Следующий день</option>
+              </select>
+            </div>
+            <div class="field">
+              <span class="label">Дополнительно</span>
+              <label><input type="checkbox" name="promo" onchange="restSearchForm(true);" value="on"> С акциями</label>
+              <label><input type="checkbox" name="work" checked="" onchange="restSearchForm(true);" value="on"> Работает сейчас</label>
+              <label><input type="checkbox" name="cart" onchange="restSearchForm(true);" value="on"> Оплата картой</label>
+              <label><input type="checkbox" name="bonus" onchange="restSearchForm(true);" value="on"> Еда за баллы</label>
+              <label><input type="checkbox" name="delivery" onchange="restSearchForm(true);" value="free"> Бесплатная доставка</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 restaurants-list-wrapper">
+          <div class="b-similar">
+            <div class="items">
+              <div class="item h-tooltip">
+                <a href="/restaurants/menu/ilpatiomsk2">
+                  <div class="img label-best">
+                    <img src="img/orgs/org685.jpg" alt="Il Патио">
+                  </div>
+                  <div class="info">
+                    <h3>Il Патио</h3>
+                    <small>Кухни: Пицца / Европейская / Итальянская</small>
+                    <div class="dl-list">
+                      <dl>
+                        <dt>Минимальная сумма заказа</dt>
+                        <dd>
+                          800 <span class="rub">p</span>
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt>Стоимость доставки</dt>
+                        <dd>
+                          Бесплатно
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt>Время доставки</dt>
+                        <dd>До 1,5 часов</dd>
+                      </dl>
+                    </div>
+                    <div class="rating">
+                      8.2/10
+                      <span class="stars">
+                        <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star-dis"></i> <i class="star-dis"></i>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <div class="b-tooltip tl"><b>ZakaZaka рекомендует</b> этот ресторан!</div>
+              </div>
+
+              <div class="item h-tooltip">
+                <a href="/restaurants/menu/tsarvkusa">
+                  <div class="img label-balls">
+                    <img src="img/orgs/org565.jpg" alt="Царство Вкуса">
+                  </div>
+                  <div class="info">
+                    <h3>Царство Вкуса</h3>
+                    <small>Кухни: Суши / Пицца / Европейская</small>
+                    <div class="dop-info icon">На заказы с 23:00 до 8:00 действует наценка 15% и минимальная сумма заказа повышается с 450 до 500 рублей и с 700 до 1000 соответственно (в зависимости от района).
+                      Доставка в Новокосино с 23:00 до 8:00 - 2000 рублей.</div>
+                    <div class="dl-list">
+                      <dl>
+                        <dt>Минимальная сумма заказа</dt>
+                        <dd>
+                          450 - 1000 <span class="rub">p
+                          <span>
+                            <span class="red">*</span>
+						              </span>
+                        </span></dd>
+                      </dl>
+                      <dl>
+                        <dt>Стоимость доставки</dt>
+                        <dd>
+                          Бесплатно
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt>Время доставки</dt>
+                        <dd>До 1 часа</dd>
+                      </dl>
+                    </div>
+                    <div class="rating">
+                      8.9/10
+                      <span class="stars">
+                        <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star-dis"></i> <i class="star-dis"></i>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <div class="b-tooltip tl">Этот ресторан готов обменять ваши баллы на дополнительное блюдо</div>
+              </div>
+
+              <div class="item">
+                <a href="/restaurants/menu/etaj">
+                  <div class="img">
+                    <img src="img/orgs/org661.jpg" alt="Этаж">
+                  </div>
+                  <div class="info">
+                    <h3>Этаж</h3>
+                    <small>Кухни: Пицца / Шашлыки / Бургеры</small>
+                    <div class="dop-info icon">Минимальная сумма заказа за МКАД с 22.00 до 10.00 составляет 1500 рублей.</div>
+                    <div class="dl-list">
+                      <dl>
+                        <dt>Минимальная сумма заказа</dt>
+                        <dd>
+                          800 <span class="rub">p</span>
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt>Стоимость доставки</dt>
+                        <dd>
+                          Бесплатно
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt>Время доставки</dt>
+                        <dd>До 1,5 часов</dd>
+                      </dl>
+                    </div>
+                    <div class="rating">
+                      8.5/10
+                      <span class="stars">
+                        <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star-dis"></i> <i class="star-dis"></i>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="/restaurants/menu/pizzarollemsk">
+                  <div class="img">
+                    <img src="img/orgs/org1484.jpg" alt="Pizzarolle">
+                  </div>
+                  <div class="info">
+                    <h3>Pizzarolle</h3>
+                    <small>Кухни: Суши / Пицца / Европейская</small>
+                    <div class="dop-info icon">Возможна оплата банковскими картами.</div>
+                    <div class="dl-list">
+                      <dl>
+                        <dt>Минимальная сумма заказа</dt>
+                        <dd>
+                          750 <span class="rub">p</span></dd>
+                      </dl>
+                      <dl>
+                        <dt>Стоимость доставки</dt>
+                        <dd>
+                          Бесплатно
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt>Время доставки</dt>
+                        <dd>До 1,5 часов</dd>
+                      </dl>
+                    </div>
+                    <div class="rating">
+                      7.1/10
+                      <span class="stars">
+                        <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star-dis"></i> <i class="star-dis"></i> <i class="star-dis"></i>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!--        APP-BOX       -->
@@ -187,7 +390,7 @@
 <!--        BENEFITS        -->
 <section class="benefits box-shadow">
   <div class="benefits-inner">
-    <div class="title">ЗАКАЗ ШАШЛЫКА: ПРАЗДНИК, КОТОРЫЙ ВСЕГДА С ТОБОЙ</div>
+    <div class="title">Заказ шашлыка: праздник, который всегда с тобой</div>
     <ul class="list-unstyled">
       <li>
         <p class="small text-muted">
