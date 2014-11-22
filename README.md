@@ -1,5 +1,9 @@
 The project replicates the design of the following website: http://zakazaka.ru using the latest version of Twitter Bootstrap + Sass + jQuery. 
 
+<b>Main page:</b> index.html
+
+<b>Restaurants list:</b> restaurants.html
+
 Setup:
 ```
 $ git clone git@github.com:kotapaulta/zakazaka-replica.git
