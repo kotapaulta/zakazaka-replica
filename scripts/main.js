@@ -233,3 +233,44 @@ function getUrl(b, a) {
   }
   return false;
 }
+
+function addToCart(d, b) {
+  if (checkDistrict()) {
+    var f = $(d).attr("data-id");
+    $.get("/ajax?action=addToCart&id=" + f + "&type=" + b + "&r=" + Math.random(), function(g) {
+      if (g !== "false") {
+        var data = g.split(":");
+        if (data.length > 1) {
+          $("#cart-panel .cart-food span").text(data[0]);
+          $("#cart-panel .cart-price span").text(data[1]);
+        }
+      }
+    });
+    $("#cart-panel").slideDown();
+    var a = $(d).find("img").clone().addClass("move-img");
+    $("body").append(a);
+    var c = $(d).find("img").offset(), e = $("#cart-panel").find(".cart-link").offset();
+    a.css({position: "absolute",top: c.top,left: c.left,opacity: 0.8,"border-radius": "0","z-index": 1000});
+    a.animate({left: e.left,top: e.top,opacity: 0,width: 50,height: 50,borderRadius: "50%"}, 500, function() {
+      $(".move-img").remove();
+    });
+    if (b === "bonus") {
+      $(".b-food-balls").slideUp();
+      $("#cart-panel").attr("data-score", "1");
+    }
+  }
+}
+
+function checkDistrict() {
+  if ($.cookie("zakaDistrict") === undefined || $.cookie("zakaDistrict") === 0) {
+    $("#mdistrict a").click();
+    return false;
+  }
+  return true;
+}
+function selectDistrict() {
+  var a = parseInt($("#mdistrict select").val(),10);
+  $.cookie("zakaDistrict", a, {expires: 365,path: "/"});
+  $("#mloader a").click();
+  location.reload();
+}

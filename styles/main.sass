@@ -117,6 +117,7 @@ footer
   width: 100%
   max-width: 1280px
   margin: 0 auto
+  margin-bottom: 65px
   background-color: #F4F7FB
   box-shadow: 0 1px 18px 0 rgba(0,0,0,.1)
 
@@ -1438,6 +1439,151 @@ footer
 
 .footer-inner .modalLink
   margin-left: 15px
+
+.cart-panel .empty,.user-panel .empty
+  display: none
+  padding: 40px 0
+  text-align: center
+  font-size: 12px
+  line-height: 14px
+  color: #949494
+
+
+.cart-panel
+  background: #5c68a3 url(../img/cart-panel-bg-loop.jpg) repeat-x center bottom
+  height: 65px
+  line-height: 65px
+  width: 100%
+  z-index: 1000
+  position: fixed
+  bottom: 0
+  text-align: center
+
+
+.cart-panel form
+  max-width: 962px
+  margin: 0 auto
+
+
+.cart-panel .cp-boxes
+  display: inline-block
+
+
+.cart-panel .cp-box
+  position: relative
+  border-left: 1px solid #525b8e
+  border-right: 1px solid #7d85b3
+  float: left
+
+
+.cart-panel .cp-box:first-child
+  border-left: 0
+
+
+.cart-panel .cp-box:last-child
+  border-right: 0
+
+
+.cart-panel .cart-price
+  padding: 0 22px
+
+
+.cart-panel .cart-link
+  font-family: 'museo',Arial,Verdana,Tahoma,sans-serif
+  font-size: 18px
+  padding-left: 46px
+
+
+.cart-panel .cart-link:before
+  background-position: -492px 0
+  height: 27px
+  left: 0
+  margin-top: -18px
+  top: 50%
+  width: 32px
+
+
+.cart-panel .button
+  display: inline-block
+  line-height: normal
+  margin-left: 22px
+
+
+.cart-panel .dd-bkm
+  line-height: normal
+  top: auto
+  bottom: 120%
+
+
+.cp-box .dd-bkm:before
+  background-position: 0 -23px
+  bottom: -23px
+  top: auto
+  right: 13px
+
+
+.cp-box .dropdown-list
+  text-align: left
+
+
+.cart-bkm a,.cart-food a
+  display: inline-block
+  padding: 0 22px
+  color: #FFF
+  text-shadow: 0 -1px rgba(0,0,0,0.35)
+
+
+.cart-bkm .active
+  background: url(../img/cart-panel-bg-active.png) repeat-x
+
+
+.cart-bkm .active strong
+  opacity: 1
+
+
+.cart-link,.cart-price
+  display: inline-block
+  padding: 0 22px
+  color: #FFF
+  text-shadow: 0 -1px rgba(0,0,0,0.35)
+
+
+.cart-bkm strong,.cart-food strong
+  font-weight: normal
+  border-bottom: 1px solid rgba(255,255,255,0.2)
+  opacity: .4
+
+
+.cart-bkm a:hover,.cart-food a:hover
+  background: url(../img/cart-panel-bg-active.png) repeat-x
+
+
+.cart-bkm a:hover strong,.cart-food a:hover strong
+  opacity: 1
+
+
+.cart-bkm .count,.cart-food .count
+  background: none repeat scroll 0 0 #6c76b5
+  border-radius: 11px
+  display: inline-block
+  font-weight: bold
+  height: 26px
+  line-height: 26px
+  padding: 0 12px
+  text-align: center
+  -webkit-box-shadow: rgba(0,0,0,0.26) 0 1px 0 inset
+  -moz-box-shadow: rgba(0,0,0,0.26) 0 1px 0 inset
+  box-shadow: rgba(0,0,0,0.26) 0 1px 0 inset
+
+.cart-bkm .count:hover,.cart-food .count:hover
+  background-color: #4d5795
+
+.cart-price strong
+  font-weight: normal
+  opacity: .4
+
+.cart-price span
+  font-weight: bold
 
 .overlay
   display: none
