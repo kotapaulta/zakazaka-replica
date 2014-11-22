@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Заказ и доставка еды на дом или офис в Москве. Единая интернет-служба - ZakaZaka.ru</title>
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="image_src" href="img/share.png">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="styles/jquery.formstyler.css">
+  <link rel="stylesheet" href="styles/jquery.bxslider.css">
+  <link rel="stylesheet" href="styles/carousel.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/forms.css">
+  <link rel="stylesheet" href="styles/numbers.css">
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="scripts/jquery.formstyler.js"></script>
+  <script src="scripts/jquery.modal.min.js"></script>
+
+  <script src="scripts/jquery.easing.1.3.js"></script>
+  <script src="scripts/jquery.fitvids.js"></script>
+  <script src="scripts/jquery.bxslider.js"></script>
+  <script src="scripts/main.js"></script>
+</head>
+<body>
+<div class="mainWrapper">
+
+<!--        HEADER        -->
+<header>
+  <div class="col-md-3">
+    <a class="header-logo pull-right" title="ZakaZaka" href="/">
+      <img src="img/logo.png" alt="ZakaZaka">
+    </a>
+  </div>
+  <div class="col-md-5">
+
+
+    <div class="search-bar-mini">
+      <form action="/search" method="get">
+        <div class="button">
+          <button class="icon search" type="submit"></button>
+        </div>
+        <div class="field">
+          <input class="styler" name="text" type="text" placeholder="Поиск">
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <div class="phone-box col-md-4">
+    <span class="pull-left">Call-center: <strong>8 (800) 555-58-50</strong></span>
+    <span class="pull-left text-muted">бесплатный звонок со всех телефонов</span>
+  </div>
+</header>
+
+
+<!--        NAV-TOP       -->
+<nav class="nav-top box-shadow">
+  <div class="header-inner box-shadow">
+    <div class="place">
+      <div class="js-dd-pnt place-dropdown" id="selectCity">
+        <span class="js-dd-trig"><i class="fa fa-map-marker"></i><i class="place-name">Москва</i></span>
+        <div class="js-dd dropdown">
+          <div class="dropdown-scroll">
+            <ul class="dropdown-list">
+              <li><label><input type="radio" value="http://spb.zakazaka.ru" name="city">Санкт-Петербург</label></li>
+              <li><label><input type="radio" checked="" value="http://zakazaka.ru" name="city">Москва</label></li>
+              <li><label><input type="radio" value="http://nn.zakazaka.ru" name="city">Нижний Новгород</label></li>
+              <li><label><input type="radio" value="http://ekb.zakazaka.ru" name="city">Екатеринбург</label></li>
+              <li><label><input type="radio" value="http://mo.zakazaka.ru" name="city">Московская область</label></li>
+              <li><label><input type="radio" value="http://nsk.zakazaka.ru" name="city">Новосибирск</label></li>
+              <li><label><input type="radio" value="http://kzn.zakazaka.ru" name="city">Казань</label></li>
+            </ul>
+          </div>
+        </div>
+        <div id="location-notify">
+          <div class="text">Ваш город <br><strong></strong></div>
+          <button class="btn green">Да</button>
+          <button class="btn grey">Нет</button>
+        </div>
+      </div>
+      <div class="js-dd-pnt place-dropdown" id="selectDistr">
+        <span class="js-dd-trig"><i class="fa fa-car"></i><i class="place-name">Весь город</i></span>
+        <div class="js-dd dropdown">
+          <div class="dropdown-scroll">
+            <ul class="dropdown-list">
+              <li><label><input type="radio" data-code="aviamotornaya" value="306" name="district">Авиамоторная</label></li>
+              <li><label><input type="radio" data-code="avtozavodskaya" value="216" name="district">Автозаводская</label></li>
+              <li><label><input type="radio" data-code="akademicheskaya-msk" value="276" name="district">Академическая</label></li>
+              <li><label><input type="radio" data-code="aleksandrovskiy-sad" value="247" name="district">Александровский сад</label></li>
+              <li><label><input type="radio" data-code="alekseevskaya" value="268" name="district">Алексеевская</label></li>
+              <li><label><input type="radio" data-code="alma-atinskaya" value="366" name="district">Алма-Атинская</label></li>
+              <li><label><input type="radio" data-code="altufevo" value="310" name="district">Алтуфьево</label></li>
+              <li><label><input type="radio" data-code="annino" value="331" name="district">Аннино</label>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="authoriz">
+      <a class="modalLink" href="#mreg"><i class="fa fa-user"></i><i class="regist">Регистрация</i></a>
+      <a class="modalLink" href="#msignin"><i class="fa fa-sign-in"></i><i class="enter">Вход</i></a>
+    </div>
+  </div>
+</nav>
+
+
+<!--        PROMO RESTAURANTS        -->
+<section class="promo-restaurants">
+    <div class="promo-restaurants-inner">
+      <div class="advant container">
+        <div class="col-md-4 advant-box">
+          <b>Выбор</b>
+          <div>
+            <div class="advant-box-logo inlineBlock">
+              <i class="fa fa-cutlery"></i>
+            </div>
+            <div class="advant-box-text inlineBlock">
+              <p>Все самые вкусные рестораны Вашего города на одном сайте. Меню с настоящими ценами.<br>Никаких переплат!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 advant-box">
+          <b>Выгода</b>
+          <div>
+            <div class="advant-box-logo inlineBlock">
+              <i class="fa fa-spoon"></i>
+            </div>
+            <div class="advant-box-text inlineBlock">
+              <p>У нас Вы найдете огромное количество скидок и очень выгодных акций от ресторанов!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 advant-box">
+          <b>Еда за баллы</b>
+          <div>
+            <div class="advant-box-logo inlineBlock">
+              <i class="fa fa-glass"></i>
+            </div>
+            <div class="advant-box-text inlineBlock">
+              <p>Вы можете обменять бонусные баллы на еду.<br>Сделать это просто.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<div class="breadcrumbs box-shadow">
+  <div class="inner">
+    <ul>
+      <li><a href="/">ZakaZaka</a></li> <span>→</span>
+      <span>Доставка еды</span>
+
+    </ul>
+  </div>
+</div>
+
+
+
+<!--        APP-BOX       -->
+<section class="app-box">
+  <div class="app-box-inner-wrapper">
+    <div class="app-box-inner container">
+      <div class="col-md-7">
+        <span class="small-title">Более 1000+ ресторанов у&nbsp;Вас в&nbsp;кармане!</span>
+        <p></p>
+          <span class="high-text">
+            Скачайте бесплатное приложение ZakaZaka
+            и&nbsp;заказывайте еду в&nbsp;2&nbsp;счета!
+          </span>
+        <div class="apps">
+          <a class="btn-store app-ios" target="_blank"
+             href="https://itunes.apple.com/us/app/zakazaka/id824133875?l=ru&amp;ls=1&amp;mt=8"></a>
+          <a class="btn-store app-android" target="_blank"
+             href="https://play.google.com/store/apps/details?id=ru.handh.android.zakazaka"></a>
+        </div>
+      </div>
+      <div class="bg-device"></div>
+    </div>
+  </div>
+</section>
+
+<!--        BENEFITS        -->
+<section class="benefits box-shadow">
+  <div class="benefits-inner">
+    <div class="title">ЗАКАЗ ШАШЛЫКА: ПРАЗДНИК, КОТОРЫЙ ВСЕГДА С ТОБОЙ</div>
+    <ul class="list-unstyled">
+      <li>
+        <p class="small text-muted">
+          Хотите заказать ароматный, сочный, нежный шашлык в&nbsp;офис или на&nbsp;дом? Тогда добро пожаловать на&nbsp;сайт
+          ZakaZaka, предлагающий отличный сервис и&nbsp;удобный функционал.
+          Чтобы оптимизировать поиски предприятия общественного питания, находящегося недалеко от&nbsp;вашего офиса
+          и&nbsp;специализирующегося на&nbsp;приготовлении шашлыков, вы&nbsp;можете выбрать в&nbsp;выпадающем списке интересующий
+          вас район. Ведь, если и&nbsp;заказывать шашлык на&nbsp;углях с&nbsp;доставкой по&nbsp;Москве,
+          то&nbsp;в&nbsp;ближайшем ресторане, дабы сохранить нежный вкус и&nbsp;аромат мяса, приготовленного на&nbsp;углях.
+          Шашлык от&nbsp;настоящего профи может стать &laquo;гвоздем&raquo; программы, главным блюдом застолья, яством,
+          вокруг которого будут формироваться прочие закуски. Если еще не&nbsp;так давно приготовленное на&nbsp;мангале мясо
+          можно было отведать только выбравшись за&nbsp;город, на&nbsp;пикник, то&nbsp;теперь ситуация изменилась и&nbsp;доставка
+          шашлыка через час-полтора после его заказа стала обычной практикой для жителей Москвы.
+        </p>
+      </li>
+      <li>
+        <div class="title">Доставка шашлыка по Москве: какой выбрать?</div>
+        <p class="small text-muted">
+          На&nbsp;сайте ZakaZaka можно заказать шашлык&nbsp;из: баранины, говядины, телятины, птицы, свинины, или рыбы.
+          Сочный, благоухающий шашлык никого не&nbsp;оставит равнодушным. Ваш обычный обед на&nbsp;работе станет праздничным,
+          если вы&nbsp;закажете шашлык из&nbsp;свинины с&nbsp;пряной зеленью и&nbsp;острым соусом, а&nbsp;домашних приятно
+          удивит ужин из&nbsp;аппетитного мяса с&nbsp;дымком.
+          Вы&nbsp;можете купить шашлык в&nbsp;офис или заказать доставку домой, выбрав дополнительные опции. Например,
+          можно рассчитаться за&nbsp;доставку шашлыка картой, для постоянных клиентов сервиса ZakaZaka можно воспользоваться
+          услугой &laquo;еда за&nbsp;баллы&raquo;, выбрать минимальную сумму заказа и&nbsp;сделать его в&nbsp;ресторане, предлагающем
+          акционные скидки.
+          Заказ шашлыка через интернет может стать увлекательным занятием, не&nbsp;затратным для вашего кошелька и&nbsp;придающим
+          новый смысл обычной трапезе.
+        </p>
+      </li>
+    </ul>
+    <br/>
+  </div>
+</section>
+
+
+<!--        FOOTER        -->
+<footer class="box-shadow">
+  <div class="footer-inner container">
+    <div class="row footer-rights">
+      <div class="col-md-6">
+        <span class="pull-left">© 2013-2014 ZakaZaka. Ресторанов много, сайт – один.</span>
+        <span class="text-muted pull-left">Все права защищены</span>
+      </div>
+      <div class="col-md-6">
+        <div class="social-wrapper pull-right">
+          <button class="btn btn-default"><i class="fa fa-vk"></i></button>
+          <button class="btn btn-default"><i class="fa fa-facebook"></i></button>
+          <button class="btn btn-default"><i class="fa fa-twitter"></i></button>
+          <button class="btn btn-default"><i class="fa fa-instagram"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-nav border-row">
+      <div class="row">
+        <div class="site-map col-md-4 small">
+          <ul class="list-unstyled">
+            <li><a href="/about">О проекте</a></li>
+            <li><a href="/contacts">Контакты</a></li>
+            <li><a href="/partners">Информация для партнеров</a></li>
+            <li><a href="/agreement">Пользовательское соглашение</a></li>
+          </ul>
+        </div>
+        <div class="dopinfo col-md-2 small">
+          <ul class="list-unstyled">
+            <li><a href="/restaurants/pizza">Доставка пиццы</a></li>
+            <li><a href="/restaurants/sushi">Доставка суши</a></li>
+            <li><a href="/restaurants">Доставка еды</a></li>
+            <li><a href="/food">Доставка продуктов</a></li>
+          </ul>
+        </div>
+        <div class="dop-link col-md-5 small">
+          <ul class="list-unstyled">
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quo!</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, porro, rerum?</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, sunt!</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="feedback-link">
+          <a href="#mfeedback" class="modalLink">
+            <i class="fa fa-comment text-muted"></i> <span>Написать нам</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-------------------------->
+<!--        MODALS        -->
+<!-------------------------->
+
+
+<!--        REGISTRATION        -->
+<div id="mreg" class="custom-modal custom-modal-reg">
+  <div class="form-reg">
+    <span class="close-custom-modal">Закрыть</span>
+    <div class="form">
+      <div class="custom-modal-title">Регистрация</div>
+      <form onsubmit="return userReg();">
+        <div class="field icon email">
+          <input class="styler" required="" type="email" name="email" placeholder="Email">
+        </div>
+        <div class="field icon name">
+          <input class="styler" required="" type="text" name="name" placeholder="Имя">
+        </div>
+        <div class="field icon pass">
+          <input class="styler" required="" type="password" name="password" placeholder="Пароль">
+        </div>
+        <div class="field icon tel">
+          <input class="styler" required="" type="tel" name="phone" placeholder="Телефон">
+        </div>
+        <div class="accept">
+          <label><input type="checkbox" required="">Я принимаю</label>
+          <br><a href="/agreement">Условия пользовательского соглашения.</a>
+        </div>
+        <div class="field error"></div>
+        <div class="button">
+          <button class="btn btn-success" type="submit">Зарегистрироваться</button>
+        </div>
+      </form>
+    </div>
+    <div class="social-auth">
+      <span>Используя аккаунт из социальной сети</span>
+      <div class="social-auth-btn">
+        <a title="ВКонтакте" href="/oauth/vk" target="_top" class="vk">ВКонтакте</a>
+        <a title="Facebook" href="/oauth/facebook" target="_top" class="fb">Facebook</a>
+        <a title="Mail.Ru" href="/oauth/mailru" target="_top" class="mr">Mail.Ru</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--        SIGN IN        -->
+<div id="msignin" class="custom-modal custom-modal-signin">
+  <div class="form-signin">
+    <span class="close-custom-modal">Закрыть</span>
+    <div class="form">
+      <div class="custom-modal-title">Вход</div>
+      <form onsubmit="return userLogin();">
+        <div class="field icon email">
+          <input class="styler" required="" type="email" name="email" placeholder="Email">
+        </div>
+        <div class="field icon pass">
+          <input class="styler" required="" type="password" name="password" placeholder="Пароль">
+        </div>
+        <div class="field error"></div>
+        <div class="buttons">
+          <a class="recover-link modalLink" href="#mrecover">Забыли пароль?</a>
+          <div class="button">
+            <button class="btn btn-success" type="submit">Войти</button>
+          </div>
+          <div class="registration">
+            Ещё не с нами?
+            <a class="modalLink" href="#mreg">Зарегистрируйтесь!</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="social-auth">
+      <span>Используя аккаунт из социальной сети</span>
+      <div class="social-auth-btn">
+        <a title="ВКонтакте" href="/oauth/vk" target="_top" class="vk">ВКонтакте</a>
+        <a title="Facebook" href="/oauth/facebook" target="_top" class="fb">Facebook</a>
+        <a title="Mail.Ru" href="/oauth/mailru" target="_top" class="mr">Mail.Ru</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay"></div>
+
+</div>
+</body>
+</html>
