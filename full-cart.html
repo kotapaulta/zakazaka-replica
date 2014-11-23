@@ -345,6 +345,82 @@
 <!--        MODALS        -->
 <!-------------------------->
 
+<div id="morder" class="custom-modal custom-modal-order-notauth" style="display: none;">
+  <div class="form-order-notauth">
+    <span class="close-custom-modal">Закрыть</span>
+    <div class="total">
+      <div class="custom-modal-title">Оформление заказа</div>
+      <dl>
+        <dt>Общая сумма заказа:</dt>
+        <dd id="form-summa"></dd>
+        <dt>Вы заработаете:</dt>
+        <dd id="form-bonus"></dd>
+      </dl>
+    </div>
+    <div class="choice-form">
+      <div class="form-signin">
+        <div class="custom-modal-title">Вход</div>
+        <form onsubmit="return userCartLogin();">
+          <div class="field icon email">
+            <input class="styler" required="" type="email" name="email" placeholder="Email">
+          </div>
+          <div class="field icon pass">
+            <input class="styler" required="" type="password" name="password" placeholder="Пароль">
+          </div>
+          <div class="info">
+            Баллы на счет получает только зарегистрированный пользователь
+          </div>
+          <div class="field error"></div>
+          <div class="buttons">
+            <a class="recover-link modalLink" href="#mrecover">Забыли пароль?</a>
+            <div class="button">
+              <button class="btn btn-success" type="submit">Войти</button>
+            </div>
+            <div class="registration">
+              Еще не с нами?
+              <a class="modalLink" href="#mreg">Зарегистрируйтесь!</a>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="form-quick-order">
+        <div class="custom-modal-title">Быстрый заказ</div>
+        <form onsubmit="return makeOrder();">
+          <div class="field">
+            <input class="styler" type="text" required="" autocomplete="off" name="name" placeholder="Имя">
+            <input type="hidden" name="org">
+          </div>
+          <div class="field">
+            <input class="styler" type="tel" required="" autocomplete="off" name="phone" placeholder="Телефон" maxlength="18">
+          </div>
+          <div class="field briefly">
+            <input class="styler" type="text" autocomplete="off" name="address" placeholder="Адрес">
+          </div>
+          <div class="extended">
+            <div class="field">
+              <input class="styler" type="text" autocomplete="off" name="street" placeholder="Улица">
+            </div>
+            <div class="field house">
+              <input class="styler" type="text" autocomplete="off" name="home" placeholder="Дом">
+              <input class="styler" type="text" autocomplete="off" name="building" placeholder="Корп.">
+              <input class="styler" type="text" autocomplete="off" name="flat" placeholder="Кв.">
+            </div>
+          </div>
+          <div class="field">
+            <textarea class="styler" name="comment" placeholder="Комментарий (не обязательно)"></textarea>
+          </div>
+          <div class="button">
+            <div class="button">
+              <button class="btn btn-success" type="submit">Заказать</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <a href="#morder" id="order" class="modalLink"></a>
+</div>
+
 <div class="overlay"></div>
 
 </body>

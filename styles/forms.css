@@ -52,6 +52,17 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.modal-signin .form-signin, .form-reg, .form-feedback, .form-review, .form-recover, .form-invite, .form-partners, .form-order-auth, .form-order-notauth, .form-confirm, .form-district, .form-gift-order, .form-gift-thanks {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 6% auto 3%;
+  padding: 40px 30px 0;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 .custom-modal-signin .form-signin {
   background-image: url(../img/modal_bg/g-modal-form-login.png); }
 

@@ -275,3 +275,26 @@ function selectDistrict() {
   $("#mloader a").click();
   location.reload();
 }
+function orderForm(d, b) {
+  if (checkDistrict()) {
+    if (b === 1) {
+      $("#morder .briefly").hide();
+      $("#morder .extended").show();
+      $('#morder input[name="street"]').prop("required", true);
+      $('#morder input[name="home"]').prop("required", true);
+      $('#morder input[name="address"]').prop("required", false);
+    } else {
+      $("#morder .briefly").show();
+      $("#morder .extended").hide();
+      $('#morder input[name="street"]').prop("required", false);
+      $('#morder input[name="home"]').prop("required", false);
+      $('#morder input[name="address"]').prop("required", true);
+    }
+    var a = parseInt($("#org" + d + " .total-price span").text(),10);
+    var c = Math.floor(a / 10);
+    $("#form-summa").text(a + " " + decOfNum(a, ["рубль", "рубля", "рублей"]));
+    $("#form-bonus").text(c + " " + decOfNum(c, ["балл", "балла", "баллов"]));
+    $('#morder input[name="org"]').val(d);
+    $("#order").click();
+  }
+}
