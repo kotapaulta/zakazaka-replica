@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Заказ и доставка еды на дом или офис в Москве. Единая интернет-служба - ZakaZaka.ru</title>
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="image_src" href="img/share.png">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="styles/jquery.formstyler.css">
+  <link rel="stylesheet" href="styles/jquery.bxslider.css">
+  <link rel="stylesheet" href="styles/carousel.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/forms.css">
+  <link rel="stylesheet" href="styles/numbers.css">
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="scripts/jquery.formstyler.js"></script>
+  <script src="scripts/jquery.modal.min.js"></script>
+
+  <script src="scripts/jquery.easing.1.3.js"></script>
+  <script src="scripts/jquery.fitvids.js"></script>
+  <script src="scripts/jquery.bxslider.js"></script>
+  <script src="scripts/main.js"></script>
+</head>
+<body>
+<div class="mainWrapper">
+
+<!--        HEADER        -->
+<header>
+  <div class="col-md-3">
+    <a class="header-logo pull-right" title="ZakaZaka" href="/">
+      <img src="img/logo.png" alt="ZakaZaka">
+    </a>
+  </div>
+  <div class="col-md-5">
+    <div class="header-cart pull-left text-muted">
+      <i class="fa fa-shopping-cart"></i>
+      <span>Корзина</span>
+    </div>
+  </div>
+  <div class="phone-box col-md-4">
+    <span class="pull-left">Call-center: <strong>8 (800) 555-58-50</strong></span>
+    <span class="pull-left text-muted">бесплатный звонок со всех телефонов</span>
+  </div>
+</header>
+
+
+<section class="s-checkout">
+<div class="inner">
+<div class="checkout-items">
+<div class="checkout-item visible" id="org340">
+  <h2><a href="/restaurants/menu/dvincenzo">Дерзкий Vincenzo</a></h2>
+
+  <div class="food-list">
+    <div class="food-item visible" id="item54843">
+      <table>
+        <tbody>
+        <tr>
+          <td class="fi-title">Барбекю</td>
+          <td class="fi-img">
+            <div class="img"><img src="img/custom-food/dvincenzo-pitstsa-barbekyu-40smnbsp.2733.jpg" alt="Барбекю">
+            </div>
+            <div class="fi-desc">
+              <img src="img/custom-food/dvincenzo-pitstsa-barbekyu-40smnbsp.2733.jpg" alt="Барбекю">
+              Ø 40см. Коктейльный соус, сыр «Mozzarella», охотничьи колбаски, томаты черри, пепперони, сладкий перец,
+              соус барбекю.
+            </div>
+          </td>
+          <td class="fi-count">
+            <a class="count-minus icon" href="#" onclick="return incrementItem(54843, 340, -1);"></a>
+
+            <div class="counter-num">
+              <input class="input-counter" id="count54843" readonly="" type="text" min="1" max="99" value="1">
+            </div>
+            <a class="count-plus icon" href="#" onclick="return incrementItem(54843, 340, 1);"></a>
+          </td>
+          <td class="fi-price"><span>750 <i class="rub">p</i></span></td>
+          <td class="fi-remove">
+            <a href="#" onclick="return removeItem(54843, 340);" class="remove-item icon"
+               title="Удалить блюдо из заказа"></a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="food-item visible" id="item31901">
+      <table>
+        <tbody>
+        <tr>
+          <td class="fi-title">Вилладжио (вегетарианская)</td>
+          <td class="fi-img">
+            <div class="img"><img src="img/custom-food/dvincenzo-pitstsa-villadjio-vegetarianskaya-40smnbsp.3372.jpg"
+                                  alt="Вилладжио (вегетарианская)"></div>
+            <div class="fi-desc">
+              <img src="img/custom-food/dvincenzo-pitstsa-villadjio-vegetarianskaya-40smnbsp.3372.jpg"
+                   alt="Вилладжио (вегетарианская)">
+              ? 40см. Томатный соус "Vincenzo", сыр "Mozzarella", листья шпината, лук репчатый , болг. перец, шамп-ны,
+              помидоры, сельдерей.
+            </div>
+          </td>
+          <td class="fi-count">
+            <a class="count-minus icon" href="#" onclick="return incrementItem(31901, 340, -1);"></a>
+
+            <div class="counter-num">
+              <input class="input-counter" id="count31901" readonly="" type="text" min="1" max="99" value="1">
+            </div>
+            <a class="count-plus icon" href="#" onclick="return incrementItem(31901, 340, 1);"></a>
+          </td>
+          <td class="fi-price"><span>500 <i class="rub">p</i></span></td>
+          <td class="fi-remove">
+            <a href="#" onclick="return removeItem(31901, 340);" class="remove-item icon"
+               title="Удалить блюдо из заказа"></a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="checkout">
+      <div class="box-tooltip">
+        <button class="btn btn-success" onclick="orderForm(340, 0);">Оформить заказ</button>
+
+
+      </div>
+      <a href="/restaurants/menu/dvincenzo" class="back">Вернуться в меню</a>
+    </div>
+  </div>
+  <div class="food-order">
+    <div class="row">Минимальная сумма заказа: <span>700 <i class="rub">p</i></span></div>
+    <div class="row">Сумма заказа: <span>1250 <i class="rub">p</i></span></div>
+    <div class="row">Стоимость доставки:
+				<span>
+
+					Бесплатно
+				</span>
+    </div>
+    <div class="total-price"><strong>Итого: </strong><span>1250<i class="rub">p</i></span></div>
+  </div>
+  <a href="#" onclick="return removeOrg(340);" class="remove-item icon" title="Удалить заказ для данного ресторана"></a>
+</div>
+
+<div class="checkout-item visible" id="org661">
+  <h2><a href="/restaurants/menu/etaj">Этаж</a></h2>
+
+  <div class="food-list">
+    <div class="food-item visible" id="item82067">
+      <table>
+        <tbody>
+        <tr>
+          <td class="fi-title">Ролл Филадельфия Классик</td>
+          <td class="fi-img">
+            <div class="img"><img src="img/custom-food/etaj-yaponskaya-kuhnya-rollyi-191.1534.jpg"
+                                  alt="Ролл Филадельфия Классик"></div>
+            <div class="fi-desc">
+              <img src="img/custom-food/etaj-yaponskaya-kuhnya-rollyi-191.1534.jpg" alt="Ролл Филадельфия Классик">
+              Рис сыром Филадельфия, огурец. Сверху выкладывают филе лосося
+            </div>
+          </td>
+          <td class="fi-count">
+            <a class="count-minus icon" href="#" onclick="return incrementItem(82067, 661, -1);"></a>
+
+            <div class="counter-num">
+              <input class="input-counter" id="count82067" readonly="" type="text" min="1" max="99" value="1">
+            </div>
+            <a class="count-plus icon" href="#" onclick="return incrementItem(82067, 661, 1);"></a>
+          </td>
+          <td class="fi-price"><span>245 <i class="rub">p</i></span></td>
+          <td class="fi-remove">
+            <a href="#" onclick="return removeItem(82067, 661);" class="remove-item icon"
+               title="Удалить блюдо из заказа"></a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="food-item visible" id="item82049">
+      <table>
+        <tbody>
+        <tr>
+          <td class="fi-title">Суши с копченым лососем</td>
+          <td class="fi-img">
+            <div class="img"><img src="img/custom-food/etaj-yaponskaya-kuhnya-sushi-168.374.jpg"
+                                  alt="Суши с копченым лососем"></div>
+            <div class="fi-desc">
+              <img src="img/custom-food/etaj-yaponskaya-kuhnya-sushi-168.374.jpg" alt="Суши с копченым лососем">
+
+            </div>
+          </td>
+          <td class="fi-count">
+            <a class="count-minus icon" href="#" onclick="return incrementItem(82049, 661, -1);"></a>
+
+            <div class="counter-num">
+              <input class="input-counter" id="count82049" readonly="" type="text" min="1" max="99" value="1">
+            </div>
+            <a class="count-plus icon" href="#" onclick="return incrementItem(82049, 661, 1);"></a>
+          </td>
+          <td class="fi-price"><span>60 <i class="rub">p</i></span></td>
+          <td class="fi-remove">
+            <a href="#" onclick="return removeItem(82049, 661);" class="remove-item icon"
+               title="Удалить блюдо из заказа"></a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="checkout">
+      <div class="box-tooltip">
+        <button class="btn btn-success" disabled="" onclick="orderForm(661, 0);">Оформить заказ</button>
+
+
+        <div class="b-tooltip tc">Для заказа не хватает <b>495 руб.</b></div>
+      </div>
+      <a href="/restaurants/menu/etaj" class="back">Вернуться в меню</a>
+    </div>
+  </div>
+  <div class="food-order">
+    <div class="row">Минимальная сумма заказа: <span>800 <i class="rub">p</i></span></div>
+    <div class="row">Сумма заказа: <span>305 <i class="rub">p</i></span></div>
+    <div class="row not-enough">Не хватает для заказа: <span class="red">495 <i class="rub">p</i></span></div>
+    <div class="row">Стоимость доставки:
+				<span>
+
+					Бесплатно
+				</span>
+    </div>
+    <div class="total-price"><strong>Итого: </strong><span>305<i class="rub">p</i></span></div>
+  </div>
+  <a href="#" onclick="return removeOrg(661);" class="remove-item icon" title="Удалить заказ для данного ресторана"></a>
+</div>
+
+<div class="checkout-item visible" id="org417">
+  <h2><a href="/restaurants/menu/fastpeppersbk">Доставка из Burger King</a></h2>
+
+  <div class="food-list">
+    <div class="food-item visible" id="item35524">
+      <table>
+        <tbody>
+        <tr>
+          <td class="fi-title">Двойной воппер c сыром</td>
+          <td class="fi-img">
+            <div class="img"><img src="img/custom-food/fastpeppersbk-menyu-dvoynoy-vopper-c-syirom.1500.jpg"
+                                  alt="Двойной воппер c сыром"></div>
+            <div class="fi-desc">
+              <img src="img/custom-food/fastpeppersbk-menyu-dvoynoy-vopper-c-syirom.1500.jpg"
+                   alt="Двойной воппер c сыром">
+              два бифштекса из 100% говядины с сочными помидорами, свежим нарезанным листовым салатом, густым майонезом,
+              хрустящими маринованными огурчиками и рубленым белым луком, сыром на нежной булочке с кунжутной посыпкой
+            </div>
+          </td>
+          <td class="fi-count">
+            <a class="count-minus icon" href="#" onclick="return incrementItem(35524, 417, -1);"></a>
+
+            <div class="counter-num">
+              <input class="input-counter" id="count35524" readonly="" type="text" min="1" max="99" value="1">
+            </div>
+            <a class="count-plus icon" href="#" onclick="return incrementItem(35524, 417, 1);"></a>
+          </td>
+          <td class="fi-price"><span>240 <i class="rub">p</i></span></td>
+          <td class="fi-remove">
+            <a href="#" onclick="return removeItem(35524, 417);" class="remove-item icon"
+               title="Удалить блюдо из заказа"></a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="food-item visible" id="item35523">
+      <table>
+        <tbody>
+        <tr>
+          <td class="fi-title">Тройной Воппер</td>
+          <td class="fi-img">
+            <div class="img"><img src="img/custom-food/fastpeppersbk-menyu-troynoy-vopper.538.jpg"
+                                  alt="Тройной Воппер"></div>
+            <div class="fi-desc">
+              <img src="img/custom-food/fastpeppersbk-menyu-troynoy-vopper.538.jpg" alt="Тройной Воппер">
+              три бифштекса из 100% говядины, помидоры, свежий нарезанный листовой салат, густой майонез, хрустящие
+              маринованные огурчики и рубленый белый лук на нежной булочке с кунжутной посыпкой
+            </div>
+          </td>
+          <td class="fi-count">
+            <a class="count-minus icon" href="#" onclick="return incrementItem(35523, 417, -1);"></a>
+
+            <div class="counter-num">
+              <input class="input-counter" id="count35523" readonly="" type="text" min="1" max="99" value="1">
+            </div>
+            <a class="count-plus icon" href="#" onclick="return incrementItem(35523, 417, 1);"></a>
+          </td>
+          <td class="fi-price"><span>290 <i class="rub">p</i></span></td>
+          <td class="fi-remove">
+            <a href="#" onclick="return removeItem(35523, 417);" class="remove-item icon"
+               title="Удалить блюдо из заказа"></a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="checkout">
+      <div class="box-tooltip">
+        <button class="btn btn-success" onclick="orderForm(417, 0);">Оформить заказ</button>
+
+
+      </div>
+      <a href="/restaurants/menu/fastpeppersbk" class="back">Вернуться в меню</a>
+    </div>
+  </div>
+  <div class="food-order">
+    <div class="row">Минимальная сумма заказа: <span>1 <i class="rub">p</i></span></div>
+    <div class="row">Сумма заказа: <span>530 <i class="rub">p</i></span></div>
+    <div class="row">Стоимость доставки:
+				<span>
+					450<i class="rub">p</i>
+
+				</span>
+    </div>
+    <div class="total-price"><strong>Итого: </strong><span>980<i class="rub">p</i></span></div>
+  </div>
+  <a href="#" onclick="return removeOrg(417);" class="remove-item icon" title="Удалить заказ для данного ресторана"></a>
+</div>
+
+<div class="b-empty hide">
+  К сожалению, в Вашей корзине ничего нет,<br> попробуйте добавить блюда из <a href="/restaurants">каталога</a>.
+</div>
+</div>
+</div>
+</section>
+
+
+<!--        FOOTER        -->
+<footer class="box-shadow">
+  <div class="footer-inner container">
+    <div class="row footer-rights">
+      <div class="col-md-6">
+        <span class="pull-left">© 2013-2014 ZakaZaka. Ресторанов много, сайт – один.</span>
+        <span class="text-muted pull-left">Все права защищены</span>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+<!-------------------------->
+<!--        MODALS        -->
+<!-------------------------->
+
+<div class="overlay"></div>
+
+</body>
+</html>

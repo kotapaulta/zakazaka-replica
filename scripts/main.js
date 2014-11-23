@@ -262,6 +262,7 @@ function addToCart(d, b) {
 }
 
 function checkDistrict() {
+  return true;
   if ($.cookie("zakaDistrict") === undefined || $.cookie("zakaDistrict") === 0) {
     $("#mdistrict a").click();
     return false;

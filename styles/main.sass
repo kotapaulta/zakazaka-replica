@@ -32,6 +32,16 @@ img
 .label
   font-size: 100%
 
+.red
+  color: #CF0202
+
+.rub
+  font-family: 'Rubl'
+  position: relative
+  font-size: 18px
+  display: inline-block
+  font-style: normal
+
 body
   margin: 0
   background-color: #e7e9ed
@@ -1469,6 +1479,384 @@ footer
 
 .s-checkout .b-empty
   margin: 22px auto 40px
+
+.b-history-order .checkout-item
+  padding-bottom: 40px
+  margin-bottom: 16px
+
+
+.b-history-order .food-list
+  width: 360px
+
+
+.b-history-order .checkout
+  padding-bottom: 20px
+
+
+.checkout-item
+  position: relative
+
+
+.checkout-item h2
+  font-family: 'museobold',Arial,Verdana,Tahoma,sans-serif
+  font-size: 29px
+  line-height: 26px
+  padding: 10px 0 26px
+  font-weight: normal
+
+
+.checkout-item h2 a:hover
+  border-bottom: 1px solid #d5d5d5
+
+
+.checkout-item h3
+  font-family: 'museo',Arial,Verdana,Tahoma,sans-serif
+  font-size: 18px
+  padding: 0 0 16px 3px
+  font-weight: normal
+
+
+.checkout-item .food-list,.checkout-item .food-order
+  display: inline-block
+  vertical-align: top
+
+
+.checkout-item .food-list
+  border-top: 1px solid #e9e9eb
+  margin-bottom: 34px
+  margin-right: -4px
+
+
+.checkout-item .food-list h3
+  padding: 16px 0 16px 3px
+
+
+.checkout-item .food-order
+  border: 1px solid #e9e9eb
+  margin-left: 10px
+  padding: 20px 0 0
+  text-align: center
+  width: 300px
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+
+.checkout-item .checkout .back
+  border-bottom: 1px dashed #999
+  color: #999
+  font-size: 12px
+  margin-left: 30px
+
+
+.checkout-item .checkout .back:hover
+  border: 0
+
+
+.checkout-item .remove-item
+  display: inline-block
+  vertical-align: middle
+  width: 18px
+  height: 18px
+  border: 2px solid #dfdfdf
+  -webkit-border-radius: 18px
+  -moz-border-radius: 18px
+  border-radius: 18px
+  -webkit-transition: border .25s ease-in-out 0s
+  -moz-transition: border .25s ease-in-out 0s
+  transition: border .25s ease-in-out 0s
+
+
+.checkout-item .remove-item:before
+  width: 8px
+  height: 10px
+  top: 3px
+  left: 3px
+
+
+.checkout-item .remove-item:hover
+  border-color: #939393
+
+
+.checkout-item>.remove-item
+  position: absolute
+  right: 0
+  top: 10px
+
+
+.checkout-item>.remove-item:before
+  background-position: -119px -28px
+
+
+.food-order .row
+  display: block
+  margin-bottom: 15px
+  opacity: .4
+
+
+.food-order .discount
+  margin-bottom: 15px
+
+
+.food-order .discount span
+  opacity: .4
+
+
+.food-order .discount.no
+  text-decoration: line-through
+
+
+.food-order .row .rub
+  font-size: 14px
+
+
+.food-order .not-enough
+  opacity: 1
+
+
+.food-order .total-price
+  border-top: 1px solid #e9e9eb
+  font-size: 21px
+  line-height: 16px
+  margin: 15px 13px 0
+  padding: 35px 0 32px
+
+
+.food-order .total-price .rub
+  font-size: 21px
+
+
+.food-order .total-price strong
+  font-family: 'museo',Arial,Verdana,Tahoma,sans-serif
+  font-weight: normal
+
+
+.food-order .total-price b
+  font-family: 'museolight',Arial,Verdana,Tahoma,sans-serif
+  font-weight: normal
+
+
+.food-item
+  border-bottom: 1px solid #e9e9eb
+
+
+.food-item .no-price .fi-price,.food-item .no-item .fi-price,.food-item .no-item .fi-title
+  text-decoration: line-through
+
+
+.food-item .fi-title
+  width: 250px
+  padding: 17px 8px 17px 0
+
+
+.food-item .fi-img
+  padding: 5px 8px
+  width: 108px
+
+
+.food-item .fi-count
+  padding: 17px 8px
+  width: 108px
+  text-align: center
+  white-space: nowrap
+
+
+.food-item .fi-price
+  font-family: 'museo',Arial,Verdana,Tahoma,sans-serif
+  padding: 17px 8px
+  width: 100px
+  text-align: center
+
+
+.food-item .fi-remove
+  width: 18px
+  text-align: right
+
+
+.food-item .fi-remove .remove-item:before
+  background-position: -129px -28px
+
+
+.fi-img
+  position: relative
+
+
+.fi-img .img
+  display: block
+  width: 90px
+  height: 60px
+  overflow: hidden
+  margin: 0 auto
+
+
+.fi-img .img:hover+.fi-desc
+  display: block
+
+
+.fi-img img
+  display: block
+  margin-top: -15px
+
+
+.fi-img .fi-desc
+  display: none
+  background-color: #FFF
+  font-size: 13px
+  padding: 15px
+  position: absolute
+  left: 100%
+  width: 200px
+  top: 0
+  z-index: 10
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+  -webkit-box-shadow: #b3b3b3 0 1px 5px 0
+  -moz-box-shadow: #b3b3b3 0 1px 5px 0
+  box-shadow: #b3b3b3 0 1px 5px 0
+
+
+.fi-img .fi-desc img
+  margin-bottom: 10px
+
+
+.fi-img .fi-desc:before
+  background: url(../img/angle.png) no-repeat
+  content: ""
+  display: inline-block
+  height: 40px
+  left: -25px
+  position: absolute
+  top: 10px
+  width: 25px
+
+
+.fi-count .count-minus,.fi-count .counter-num,.fi-count .count-plus
+  display: inline-block
+  vertical-align: middle
+
+
+.fi-count .count-minus,.fi-count .count-plus
+  background-color: #fff
+  border: 1px solid #d9d9d9
+  width: 19px
+  height: 19px
+  cursor: pointer
+  margin: 0 2px
+  -webkit-border-radius: 19px
+  -moz-border-radius: 19px
+  border-radius: 19px
+  -webkit-transition: border .25s ease-in-out 0s
+  -moz-transition: border .25s ease-in-out 0s
+  transition: border .25s ease-in-out 0s
+
+
+.fi-count .count-minus:before,.fi-count .count-plus:before
+  height: 10px
+  left: 4px
+  top: 4px
+  width: 10px
+
+
+.fi-count .count-minus:hover,.fi-count .count-plus:hover
+  border-color: #939393
+
+
+.fi-count .count-minus:before
+  background-position: -161px -28px
+
+
+.fi-count .count-plus:before
+  background-position: -171px -28px
+
+
+.fi-count .counter-num
+  width: 50px
+
+
+.fi-count .input-counter
+  font-family: 'museo',Arial,Verdana,Tahoma,sans-serif
+  font-size: 16px
+  line-height: 16px
+  text-align: center
+  color: #000
+  width: 100%
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+
+.b-address h3
+  font-family: 'museo',Arial,Verdana,Tahoma,sans-serif
+  font-size: 18px
+  font-weight: normal
+  padding: 16px 0 16px 3px
+
+
+.address-item
+  background: none repeat scroll 0 0 #eaebf2
+  border-radius: 3px
+  height: 42px
+  line-height: 42px
+  margin: 0 0 13px
+  overflow: hidden
+  padding: 0 19px
+  position: relative
+  text-overflow: ellipsis
+  white-space: nowrap
+
+
+.address-item .remove
+  background: url(../img/sprite.png) no-repeat -471px 0
+  display: inline-block
+  height: 21px
+  position: absolute
+  right: 11px
+  text-indent: -9999px
+  top: 50%
+  margin-top: -11px
+  width: 21px
+
+
+.add-address .field
+  margin-bottom: 20px
+
+
+.add-address .label
+  display: inline-block
+  color: #adadad
+  font-size: 13px
+  margin-right: 30px
+  padding-left: 3px
+  padding-top: 13px
+  width: 97px
+
+
+.add-address .house input,.add-address .flat input
+  width: 60px
+
+
+.add-address .jq-selectbox__select
+  background: 0
+  width: 251px
+  -webkit-box-shadow: rgba(0,0,0,0.25) 0 1px 1px inset,rgba(248,152,29,0.56) 0 0 0
+  -moz-box-shadow: rgba(0,0,0,0.25) 0 1px 1px inset,rgba(248,152,29,0.56) 0 0 0
+  box-shadow: rgba(0,0,0,0.25) 0 1px 1px inset,rgba(248,152,29,0.56) 0 0 0
+
+
+.add-address .jq-selectbox__dropdown
+  width: 100%
+
+
+.add-address .button
+  border-top: 1px solid #e9e9eb
+  clear: both
+  height: 39px
+  margin-top: 32px
+  padding: 17px 0
+  text-align: right
+
+
 
 .b-empty
   background: url(../img/g-empty-bg.png) no-repeat center 58px
