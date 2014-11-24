@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Заказ и доставка еды на дом или офис в Москве. Единая интернет-служба - ZakaZaka.ru</title>
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="image_src" href="img/share.png">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="styles/jquery.formstyler.css">
+  <link rel="stylesheet" href="styles/jquery.bxslider.css">
+  <link rel="stylesheet" href="styles/carousel.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/forms.css">
+  <link rel="stylesheet" href="styles/numbers.css">
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="scripts/jquery.formstyler.js"></script>
+  <script src="scripts/jquery.modal.min.js"></script>
+
+  <script src="scripts/jquery.easing.1.3.js"></script>
+  <script src="scripts/jquery.fitvids.js"></script>
+  <script src="scripts/jquery.bxslider.js"></script>
+  <script src="scripts/main.js"></script>
+</head>
+<body>
+<div class="mainWrapper">
+
+<!--        HEADER        -->
+<header>
+  <div class="col-md-3">
+    <a class="header-logo pull-right" title="ZakaZaka" href="/">
+      <img src="img/logo.png" alt="ZakaZaka">
+    </a>
+  </div>
+  <div class="col-md-5">
+
+
+    <div class="search-bar-mini">
+      <form action="/search" method="get">
+        <div class="button">
+          <button class="icon search" type="submit"></button>
+        </div>
+        <div class="field">
+          <input class="styler" name="text" type="text" placeholder="Поиск">
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <div class="phone-box col-md-4">
+    <span class="pull-left">Call-center: <strong>8 (800) 555-58-50</strong></span>
+    <span class="pull-left text-muted">бесплатный звонок со всех телефонов</span>
+  </div>
+</header>
+
+
+<!--        NAV-TOP       -->
+<nav class="nav-top box-shadow">
+  <div class="header-inner box-shadow">
+    <div class="place">
+      <div class="js-dd-pnt place-dropdown" id="selectCity">
+        <span class="js-dd-trig"><i class="fa fa-map-marker"></i><i class="place-name">Москва</i></span>
+
+        <div class="js-dd dropdown">
+          <div class="dropdown-scroll">
+            <ul class="dropdown-list">
+              <li><label><input type="radio" value="http://spb.zakazaka.ru" name="city">Санкт-Петербург</label></li>
+              <li><label><input type="radio" checked="" value="http://zakazaka.ru" name="city">Москва</label></li>
+              <li><label><input type="radio" value="http://nn.zakazaka.ru" name="city">Нижний Новгород</label></li>
+              <li><label><input type="radio" value="http://ekb.zakazaka.ru" name="city">Екатеринбург</label></li>
+              <li><label><input type="radio" value="http://mo.zakazaka.ru" name="city">Московская область</label></li>
+              <li><label><input type="radio" value="http://nsk.zakazaka.ru" name="city">Новосибирск</label></li>
+              <li><label><input type="radio" value="http://kzn.zakazaka.ru" name="city">Казань</label></li>
+            </ul>
+          </div>
+        </div>
+        <div id="location-notify">
+          <div class="text">Ваш город <br><strong></strong></div>
+          <button class="btn green">Да</button>
+          <button class="btn grey">Нет</button>
+        </div>
+      </div>
+      <div class="js-dd-pnt place-dropdown" id="selectDistr">
+        <span class="js-dd-trig"><i class="fa fa-car"></i><i class="place-name">Весь город</i></span>
+
+        <div class="js-dd dropdown">
+          <div class="dropdown-scroll">
+            <ul class="dropdown-list">
+              <li><label><input type="radio" data-code="aviamotornaya" value="306" name="district">Авиамоторная</label>
+              </li>
+              <li><label><input type="radio" data-code="avtozavodskaya" value="216"
+                                name="district">Автозаводская</label></li>
+              <li><label><input type="radio" data-code="akademicheskaya-msk" value="276"
+                                name="district">Академическая</label></li>
+              <li><label><input type="radio" data-code="aleksandrovskiy-sad" value="247" name="district">Александровский
+                сад</label></li>
+              <li><label><input type="radio" data-code="alekseevskaya" value="268" name="district">Алексеевская</label>
+              </li>
+              <li><label><input type="radio" data-code="alma-atinskaya" value="366"
+                                name="district">Алма-Атинская</label></li>
+              <li><label><input type="radio" data-code="altufevo" value="310" name="district">Алтуфьево</label></li>
+              <li><label><input type="radio" data-code="annino" value="331" name="district">Аннино</label>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="authoriz">
+      <a class="modalLink" href="#mreg"><i class="fa fa-user"></i><i class="regist">Регистрация</i></a>
+      <a class="modalLink" href="#msignin"><i class="fa fa-sign-in"></i><i class="enter">Вход</i></a>
+    </div>
+  </div>
+</nav>
+
+
+<!--        PROMO RESTAURANTS        -->
+<section class="promo-restaurants">
+  <div class="promo-restaurants-inner">
+    <div class="advant container">
+      <div class="col-md-4 advant-box">
+        <b>Выбор</b>
+
+        <div>
+          <div class="advant-box-logo inlineBlock">
+            <i class="fa fa-cutlery"></i>
+          </div>
+          <div class="advant-box-text inlineBlock">
+            <p>Все самые вкусные рестораны Вашего города на одном сайте. Меню с настоящими ценами.<br>Никаких переплат!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 advant-box">
+        <b>Выгода</b>
+
+        <div>
+          <div class="advant-box-logo inlineBlock">
+            <i class="fa fa-spoon"></i>
+          </div>
+          <div class="advant-box-text inlineBlock">
+            <p>У нас Вы найдете огромное количество скидок и очень выгодных акций от ресторанов!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 advant-box">
+        <b>Еда за баллы</b>
+
+        <div>
+          <div class="advant-box-logo inlineBlock">
+            <i class="fa fa-glass"></i>
+          </div>
+          <div class="advant-box-text inlineBlock">
+            <p>Вы можете обменять бонусные баллы на еду.<br>Сделать это просто.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="breadcrumbs">
+  <div class="inner">
+    <ul>
+      <li><a href="/">ZakaZaka</a></li> <span>→</span>
+      <li><a href="/restaurants">Доставка еды</a></li>
+      <span>→</span>
+      <li><a href="/restaurants/pizza">Пицца</a></li>
+      <span>→</span>
+      <span>Меню заведения ТороПицца</span>
+    </ul>
+  </div>
+</div>
+
+<!--        RESTAURANTS       -->
+<section class="s-restaurants" id="contentBox">
+<div class="inner">
+<div class="cb-side menu-box">
+<div class="row equal">
+<div class="col-md-3 catalog-filter-wrapper">
+  <nav class="nav-left">
+    <div class="title">Меню заведения</div>
+    <ul class="nav-items">
+      <li class="selected">
+        <a href="/restaurants/menu/toropizza" class="red">Акция</a>
+      </li>
+      <li class="">
+        <a href="/restaurants/menu/toropizza/toropizza-pitstsa">Пицца</a>
+      </li>
+      <li>
+        <a href="/restaurants/menu/toropizza/toropizza-shef-pitstsa">Шеф-пицца</a>
+      </li>
+      <li class="">
+        <a href="/restaurants/menu/toropizza/toropizza-pasta">Паста</a>
+      </li>
+      <li>
+        <a href="/restaurants/menu/toropizza/toropizza-shashlyik">Шашлык</a>
+      </li>
+      <li>
+        <a href="/restaurants/menu/toropizza/toropizza-rollyi">Роллы</a>
+      </li>
+      <li>
+        <a href="/restaurants/menu/toropizza/toropizza-sushi">Суши</a>
+      </li>
+      <li>
+        <a href="/restaurants/menu/toropizza/toropizza-salatyi">Салаты</a>
+      </li>
+      <li>
+        <a href="/restaurants/menu/toropizza/toropizza-zakuski">Закуски</a>
+      </li>
+      <li>
+        <a href="/restaurants/menu/toropizza/toropizza-desertyi">Десерты</a>
+      </li>
+      <li>
+        <a href="/restaurants/menu/toropizza/toropizza-napitki">Напитки</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<div class="col-md-9 restaurants-list-wrapper">
+
+
+<div class="content-container restaurant-menu">
+  <div class="b-note warn">Возможна оплата банковскими картами.</div>
+  <h1 class="h1 bb">ТороПицца - меню ресторана</h1>
+
+  <div class="b-popular-food">
+    <h2>Популярные блюда</h2>
+
+    <div class="items">
+      <div class="item" data-id="48252">
+
+        <div class="img">
+          <img src="img/toropizza/toropizza-rollyi-kaliforniya-6-sht.3840.jpg" alt="Калифорния">
+
+          <div class="info">6 шт Икра летучей рыбы тобико, тигровая креветка, майонез, авокадо.</div>
+        </div>
+        <div class="title">
+          <h3><span>Калифорния</span></h3>
+        </div>
+        <div class="price"> 340 <span class="rub">p</span></div>
+        <div class="button">
+          <button class="btn btn-success order">Заказать<span></span></button>
+        </div>
+      </div>
+
+    </div>
+    <h2>Пиво</h2>
+
+    <div class="items">
+      <div class="item" data-id="260153">
+
+        <div class="img">
+          <img src="img/toropizza/toropizza-pivo-heineken-steklo-033-l.0159.jpg" alt="Heineken, стекло">
+
+          <div class="info">0,33 л</div>
+        </div>
+        <div class="title">
+          <h3><span>Heineken, стекло</span></h3>
+        </div>
+        <div class="price"> 140 <span class="rub">p</span></div>
+        <div class="button">
+          <button class="btn btn-success order">Заказать<span></span></button>
+        </div>
+      </div>
+
+      <div class="item" data-id="260151">
+
+        <div class="img">
+          <img src="img/toropizza/toropizza-pivo-holsten-steklo-05-l.3917.jpg" alt="Holsten, стекло">
+
+          <div class="info">0,5 л</div>
+        </div>
+        <div class="title">
+          <h3><span>Holsten, стекло</span></h3>
+        </div>
+        <div class="price"> 130 <span class="rub">p</span></div>
+        <div class="button">
+          <button class="btn btn-success order">Заказать<span></span></button>
+        </div>
+      </div>
+
+      <div class="item" data-id="260154">
+
+        <div class="img">
+          <img src="img/toropizza/toropizza-pivo-kronenbourg-1664-blanc-steklo-046-l.5459.jpg"
+               alt="Kronenbourg 1664 Blanc, стекло">
+
+          <div class="info">0,46 л Это освежающее белое пшеничное пиво с фруктовыми нотками, которое было создано
+            французскими мастерами, воодушевленными лучшими средневековыми традициями пивоварения. Содержание алкоголя:
+            4,5%.
+          </div>
+        </div>
+        <div class="title">
+          <h3><span>Kronenbourg 1664 Blanc, стекло</span></h3>
+        </div>
+        <div class="price"> 175 <span class="rub">p</span></div>
+        <div class="button">
+          <button class="btn btn-success order">Заказать<span></span></button>
+        </div>
+      </div>
+
+      <div class="item" data-id="260152">
+
+        <div class="img">
+          <img src="img/toropizza/toropizza-pivo-miller-steklo-033-l.3889.jpg" alt="Miller, стекло">
+
+          <div class="info">0,33 л Всемирно известный сорт американского бутылочного пива</div>
+        </div>
+        <div class="title">
+          <h3><span>Miller, стекло</span></h3>
+        </div>
+        <div class="price"> 130 <span class="rub">p</span></div>
+        <div class="button">
+          <button class="btn btn-success order">Заказать<span></span></button>
+        </div>
+      </div>
+
+      <div class="item" data-id="260147">
+
+        <div class="img">
+          <img src="img/toropizza/toropizza-pivo-tuborg-05.02.jpg" alt="Tuborg">
+
+          <div class="info">0.5</div>
+        </div>
+        <div class="title">
+          <h3><span>Tuborg</span></h3>
+        </div>
+        <div class="price"> 110 <span class="rub">p</span></div>
+        <div class="button">
+          <button class="btn btn-success order">Заказать<span></span></button>
+        </div>
+      </div>
+
+      <div class="item" data-id="260148">
+
+        <div class="img">
+          <img src="img/toropizza/toropizza-pivo-baltika-7-05-l.43.jpg" alt="Балтика 7">
+
+          <div class="info">0,5 л</div>
+        </div>
+        <div class="title">
+          <h3><span>Балтика 7</span></h3>
+        </div>
+        <div class="price"> 90 <span class="rub">p</span></div>
+        <div class="button">
+          <button class="btn btn-success order">Заказать<span></span></button>
+        </div>
+      </div>
+
+      <div class="item" data-id="260145">
+
+        <div class="img">
+          <img src="img/toropizza/toropizza-pivo-jiguli-barnoe-05.8002.jpg" alt="Жигули барное">
+
+          <div class="info">0.5</div>
+        </div>
+        <div class="title">
+          <h3><span>Жигули барное</span></h3>
+        </div>
+        <div class="price"> 85 <span class="rub">p</span></div>
+        <div class="button">
+          <button class="btn btn-success order">Заказать<span></span></button>
+        </div>
+      </div>
+
+      <div class="item" data-id="260146">
+
+        <div class="img">
+          <img src="img/toropizza/toropizza-pivo-kozel-05-l.2783.jpg" alt="Козел">
+
+          <div class="info">0,5 л</div>
+        </div>
+        <div class="title">
+          <h3><span>Козел</span></h3>
+        </div>
+        <div class="price"> 140 <span class="rub">p</span></div>
+        <div class="button">
+          <button class="btn btn-success order">Заказать<span></span></button>
+        </div>
+      </div>
+
+      <div class="item" data-id="260149">
+
+        <div class="img">
+          <img src="img/toropizza/toropizza-pivo-firmennoe-jivoe-toro-razlivnoe-05l.5429.jpg"
+               alt="Фирменное живое «Торо», разливное">
+
+          <div class="info">0.5л</div>
+        </div>
+        <div class="title">
+          <h3><span>Фирменное живое «Торо», разливное</span></h3>
+        </div>
+        <div class="price"> 110 <span class="rub">p</span></div>
+        <div class="button">
+          <button class="btn btn-success order">Заказать<span></span></button>
+        </div>
+      </div>
+
+      <div class="item" data-id="260150">
+
+        <div class="img">
+          <img src="img/toropizza/toropizza-pivo-firmennoe-jivoe-toro-razlivnoe-1l.2286.jpg"
+               alt="Фирменное живое «Торо», разливное">
+
+          <div class="info">1л</div>
+        </div>
+        <div class="title">
+          <h3><span>Фирменное живое «Торо», разливное</span></h3>
+        </div>
+        <div class="price"> 220 <span class="rub">p</span></div>
+        <div class="button">
+          <button class="btn btn-success order">Заказать<span></span></button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="b-similar rest-menu">
+  <h2>Похожие заведения</h2>
+
+  <div class="items">
+    <div class="item h-tooltip">
+      <a href="/restaurants/menu/ilpatiomsk2">
+        <div class="img label-best">
+          <img src="img/orgs/org685.jpg" alt="Il Патио">
+        </div>
+        <div class="info">
+          <h3>Il Патио</h3>
+          <small>Кухни: Пицца / Европейская / Итальянская</small>
+          <div class="dl-list">
+            <dl>
+              <dt>Минимальная сумма заказа</dt>
+              <dd>
+                800 <span class="rub">p</span>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Стоимость доставки</dt>
+              <dd>
+                Бесплатно
+              </dd>
+            </dl>
+            <dl>
+              <dt>Время доставки</dt>
+              <dd>До 1,5 часов</dd>
+            </dl>
+          </div>
+          <div class="rating">
+            8.2/10
+                      <span class="stars">
+                        <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i
+                          class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i
+                          class="star-dis"></i> <i class="star-dis"></i>
+                      </span>
+          </div>
+        </div>
+      </a>
+
+      <div class="b-tooltip tl"><b>ZakaZaka рекомендует</b> этот ресторан!</div>
+    </div>
+
+    <div class="item h-tooltip">
+      <a href="/restaurants/menu/tsarvkusa">
+        <div class="img label-balls">
+          <img src="img/orgs/org565.jpg" alt="Царство Вкуса">
+        </div>
+        <div class="info">
+          <h3>Царство Вкуса</h3>
+          <small>Кухни: Суши / Пицца / Европейская</small>
+          <div class="dop-info icon">На заказы с 23:00 до 8:00 действует наценка 15% и минимальная сумма заказа
+            повышается с 450 до 500 рублей и с 700 до 1000 соответственно (в зависимости от района).
+            Доставка в Новокосино с 23:00 до 8:00 - 2000 рублей.
+          </div>
+          <div class="dl-list">
+            <dl>
+              <dt>Минимальная сумма заказа</dt>
+              <dd>
+                450 - 1000 <span class="rub">p
+                          <span>
+                            <span class="red">*</span>
+						              </span>
+                        </span></dd>
+            </dl>
+            <dl>
+              <dt>Стоимость доставки</dt>
+              <dd>
+                Бесплатно
+              </dd>
+            </dl>
+            <dl>
+              <dt>Время доставки</dt>
+              <dd>До 1 часа</dd>
+            </dl>
+          </div>
+          <div class="rating">
+            8.9/10
+                      <span class="stars">
+                        <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i
+                          class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i
+                          class="star-dis"></i> <i class="star-dis"></i>
+                      </span>
+          </div>
+        </div>
+      </a>
+
+      <div class="b-tooltip tl">Этот ресторан готов обменять ваши баллы на дополнительное блюдо</div>
+    </div>
+
+    <div class="item">
+      <a href="/restaurants/menu/etaj">
+        <div class="img">
+          <img src="img/orgs/org661.jpg" alt="Этаж">
+        </div>
+        <div class="info">
+          <h3>Этаж</h3>
+          <small>Кухни: Пицца / Шашлыки / Бургеры</small>
+          <div class="dop-info icon">Минимальная сумма заказа за МКАД с 22.00 до 10.00 составляет 1500 рублей.</div>
+          <div class="dl-list">
+            <dl>
+              <dt>Минимальная сумма заказа</dt>
+              <dd>
+                800 <span class="rub">p</span>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Стоимость доставки</dt>
+              <dd>
+                Бесплатно
+              </dd>
+            </dl>
+            <dl>
+              <dt>Время доставки</dt>
+              <dd>До 1,5 часов</dd>
+            </dl>
+          </div>
+          <div class="rating">
+            8.5/10
+                      <span class="stars">
+                        <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i
+                          class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i
+                          class="star-dis"></i> <i class="star-dis"></i>
+                      </span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="item">
+      <a href="/restaurants/menu/pizzarollemsk">
+        <div class="img">
+          <img src="img/orgs/org1484.jpg" alt="Pizzarolle">
+        </div>
+        <div class="info">
+          <h3>Pizzarolle</h3>
+          <small>Кухни: Суши / Пицца / Европейская</small>
+          <div class="dop-info icon">Возможна оплата банковскими картами.</div>
+          <div class="dl-list">
+            <dl>
+              <dt>Минимальная сумма заказа</dt>
+              <dd>
+                750 <span class="rub">p</span></dd>
+            </dl>
+            <dl>
+              <dt>Стоимость доставки</dt>
+              <dd>
+                Бесплатно
+              </dd>
+            </dl>
+            <dl>
+              <dt>Время доставки</dt>
+              <dd>До 1,5 часов</dd>
+            </dl>
+          </div>
+          <div class="rating">
+            7.1/10
+                      <span class="stars">
+                        <i class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star"></i> <i
+                          class="star"></i> <i class="star"></i> <i class="star"></i> <i class="star-dis"></i> <i
+                          class="star-dis"></i> <i class="star-dis"></i>
+                      </span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<!--        FOOTER        -->
+<footer class="box-shadow">
+  <div class="footer-inner container">
+    <div class="row footer-rights">
+      <div class="col-md-6">
+        <span class="pull-left">© 2013-2014 ZakaZaka. Ресторанов много, сайт – один.</span>
+        <span class="text-muted pull-left">Все права защищены</span>
+      </div>
+      <div class="col-md-6">
+        <div class="social-wrapper pull-right">
+          <button class="btn btn-default"><i class="fa fa-vk"></i></button>
+          <button class="btn btn-default"><i class="fa fa-facebook"></i></button>
+          <button class="btn btn-default"><i class="fa fa-twitter"></i></button>
+          <button class="btn btn-default"><i class="fa fa-instagram"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-nav border-row">
+      <div class="row">
+        <div class="site-map col-md-4 small">
+          <ul class="list-unstyled">
+            <li><a href="/about">О проекте</a></li>
+            <li><a href="/contacts">Контакты</a></li>
+            <li><a href="/partners">Информация для партнеров</a></li>
+            <li><a href="/agreement">Пользовательское соглашение</a></li>
+          </ul>
+        </div>
+        <div class="dopinfo col-md-2 small">
+          <ul class="list-unstyled">
+            <li><a href="/restaurants/pizza">Доставка пиццы</a></li>
+            <li><a href="/restaurants/sushi">Доставка суши</a></li>
+            <li><a href="/restaurants">Доставка еды</a></li>
+            <li><a href="/food">Доставка продуктов</a></li>
+          </ul>
+        </div>
+        <div class="dop-link col-md-5 small">
+          <ul class="list-unstyled">
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quo!</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, porro, rerum?</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, sunt!</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="feedback-link">
+          <a href="#mfeedback" class="modalLink">
+            <i class="fa fa-comment text-muted"></i> <span>Написать нам</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+<!-------------------------->
+<!--        MODALS        -->
+<!-------------------------->
+
+
+<!--        REGISTRATION        -->
+<div id="mreg" class="custom-modal custom-modal-reg">
+  <div class="form-reg">
+    <span class="close-custom-modal">Закрыть</span>
+
+    <div class="form">
+      <div class="custom-modal-title">Регистрация</div>
+      <form onsubmit="return userReg();">
+        <div class="field icon email">
+          <input class="styler" required="" type="email" name="email" placeholder="Email">
+        </div>
+        <div class="field icon name">
+          <input class="styler" required="" type="text" name="name" placeholder="Имя">
+        </div>
+        <div class="field icon pass">
+          <input class="styler" required="" type="password" name="password" placeholder="Пароль">
+        </div>
+        <div class="field icon tel">
+          <input class="styler" required="" type="tel" name="phone" placeholder="Телефон">
+        </div>
+        <div class="accept">
+          <label><input type="checkbox" required="">Я принимаю</label>
+          <br><a href="/agreement">Условия пользовательского соглашения.</a>
+        </div>
+        <div class="field error"></div>
+        <div class="button">
+          <button class="btn btn-success" type="submit">Зарегистрироваться</button>
+        </div>
+      </form>
+    </div>
+    <div class="social-auth">
+      <span>Используя аккаунт из социальной сети</span>
+
+      <div class="social-auth-btn">
+        <a title="ВКонтакте" href="/oauth/vk" target="_top" class="vk">ВКонтакте</a>
+        <a title="Facebook" href="/oauth/facebook" target="_top" class="fb">Facebook</a>
+        <a title="Mail.Ru" href="/oauth/mailru" target="_top" class="mr">Mail.Ru</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--        SIGN IN        -->
+<div id="msignin" class="custom-modal custom-modal-signin">
+  <div class="form-signin">
+    <span class="close-custom-modal">Закрыть</span>
+
+    <div class="form">
+      <div class="custom-modal-title">Вход</div>
+      <form onsubmit="return userLogin();">
+        <div class="field icon email">
+          <input class="styler" required="" type="email" name="email" placeholder="Email">
+        </div>
+        <div class="field icon pass">
+          <input class="styler" required="" type="password" name="password" placeholder="Пароль">
+        </div>
+        <div class="field error"></div>
+        <div class="buttons">
+          <a class="recover-link modalLink" href="#mrecover">Забыли пароль?</a>
+
+          <div class="button">
+            <button class="btn btn-success" type="submit">Войти</button>
+          </div>
+          <div class="registration">
+            Ещё не с нами?
+            <a class="modalLink" href="#mreg">Зарегистрируйтесь!</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="social-auth">
+      <span>Используя аккаунт из социальной сети</span>
+
+      <div class="social-auth-btn">
+        <a title="ВКонтакте" href="/oauth/vk" target="_top" class="vk">ВКонтакте</a>
+        <a title="Facebook" href="/oauth/facebook" target="_top" class="fb">Facebook</a>
+        <a title="Mail.Ru" href="/oauth/mailru" target="_top" class="mr">Mail.Ru</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--        CART-PANEL        -->
+<div id="cart-panel" class="cart-panel hide" data-score="">
+  <form action="">
+    <ul class="cp-boxes">
+      <li class="cp-box"><a href="/cart" class="cart-link icon">Корзина</a></li>
+      <li class="cp-box js-dd-pnt hide">
+        <div class="js-dd-trig cart-bkm">
+          <a class="" href="#"><strong>Избранные заведения:</strong> <span class="count">0</span></a>
+        </div>
+        <div class="js-dd dd-bkm"></div>
+      </li>
+      <li class="cp-box">
+        <div class="cart-food"><a href="/cart"><strong>Блюд в корзине:</strong> <span class="count">0</span></a></div>
+      </li>
+      <li class="cp-box">
+        <div class="cart-price"><strong>На сумму:</strong> <span>0</span> рублей</div>
+      </li>
+      <li class="cp-box">
+        <div class="button">
+          <a href="/cart" class="btn btn-success">Перейти в корзину</a>
+        </div>
+      </li>
+    </ul>
+  </form>
+</div>
+
+<div class="overlay"></div>
+
+</body>
+</html>
