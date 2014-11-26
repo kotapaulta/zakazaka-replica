@@ -8,6 +8,8 @@ The project replicates the design of the following website: http://zakazaka.ru u
 
 <b>Checkout has items:</b> full-cart.html
 
+<b>Single restaurant </b> toropizza.html
+
 Setup:
 ```
 $ git clone git@github.com:kotapaulta/zakazaka-replica.git
