@@ -532,6 +532,214 @@ footer {
 .place-dropdown .dropdown-list li label {
   display: block; }
 
+.promo-reviews {
+  position: relative;
+  background: radial-gradient(ellipse, #E40000, rgba(77, 4, 4, 0.8)); }
+
+.promo-reviews .bg {
+  background: url(../img/promo-org-shape.png) no-repeat center 10px;
+  height: 215px; }
+
+.promo-reviews .inner {
+  position: relative;
+  padding-top: 30px; }
+
+.promo-org-links {
+  background: url(../img/promo-org-links-bg.png) no-repeat;
+  width: 157px;
+  max-height: 162px;
+  position: absolute;
+  right: 183px;
+  top: 25px;
+  border-bottom-left-radius: 5px; }
+
+.promo-org-links a {
+  display: inline-block;
+  font-family: "museobold", Arial, Verdana, Tahoma, sans-serif;
+  font-size: 12px;
+  padding-left: 32px;
+  line-height: 28px;
+  margin: 12px 0 13px 8px;
+  color: #50535e;
+  text-shadow: 0 1px 0 #fff;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent; }
+
+.promo-org-links a:before {
+  left: 3px;
+  top: 0; }
+
+.promo-org-links a:hover {
+  border-color: #d5d5d5; }
+
+.promo-org-links .org-link-review:before {
+  background-position: -39px 4px;
+  width: 22px;
+  height: 22px; }
+
+.promo-org-links .org-link-write {
+  line-height: 12px;
+  height: 25px;
+  padding-top: 3px; }
+
+.promo-org-links .org-link-write:before {
+  width: 19px;
+  height: 22px;
+  background-position: -662px 2px; }
+
+.promo-org-links .org-link-about:before {
+  background-position: -719px 0;
+  width: 25px;
+  height: 25px; }
+
+.promo-org-links .org-link-bookmark:before {
+  background-position: -332px 0;
+  width: 25px;
+  height: 25px; }
+
+.promo-org-links .org-link-bookmark .add {
+  display: block; }
+
+.promo-org-links .org-link-bookmark .del {
+  display: none; }
+
+.promo-org-links .org-link-bookmark.active:before {
+  background-position: -236px -98px; }
+
+.promo-org-links .org-link-bookmark.active .add {
+  display: none; }
+
+.promo-org-links .org-link-bookmark.active .del {
+  display: block; }
+
+.restaurant-review {
+  width: 600px;
+  margin: 17px 0 0 15px; }
+
+.restaurant-review .rating {
+  margin: 7px 0; }
+
+.restaurant-review, .b-data {
+  background-color: #FFF; }
+
+.restaurant-review .img, .b-data .img {
+  float: left;
+  border: 1px solid #dfe0e2;
+  width: 121px;
+  height: 121px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+
+.restaurant-review .img img, .b-data .img img {
+  display: block; }
+
+.restaurant-review .info, .b-data .info {
+  padding-left: 140px; }
+
+.restaurant-review .dl-list dl, .b-data .dl-list dl {
+  margin: 0; }
+
+.restaurant-review h3, .b-data h3 {
+  font-family: "museo", Arial, Verdana, Tahoma, sans-serif;
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 18px;
+  margin-bottom: 5px; }
+
+.restaurant-review small, .b-data small {
+  font-size: 12px;
+  color: #000; }
+
+.slider-review {
+  background-color: #FFF;
+  width: 145px;
+  height: 120px;
+  position: absolute;
+  right: 10px;
+  top: 35px; }
+
+.slider-review .empty {
+  color: #9d9ca2;
+  text-align: center;
+  width: 145px;
+  font-size: 12px;
+  height: 150px;
+  background: url(../img/comment-book.png) no-repeat bottom center; }
+
+.slider-review .info {
+  border-bottom: 1px solid #dfe0e2;
+  padding-bottom: 12px;
+  margin-bottom: 7px;
+  overflow: hidden; }
+
+.slider-review .info .name {
+  color: #50535e;
+  font-weight: bold;
+  line-height: 22px;
+  overflow: hidden;
+  height: 22px; }
+
+.slider-review .info .date {
+  color: #929292;
+  font-size: 11px; }
+
+.slider-review .info img {
+  float: left;
+  margin-right: 5px;
+  width: 40px;
+  height: 40px; }
+
+.slider-review .info span {
+  display: block; }
+
+.slider-review .text {
+  font-size: 12px;
+  color: #000;
+  height: 57px;
+  overflow: hidden; }
+
+.slider-review .read-all {
+  border-bottom: 1px solid #d5d5d5;
+  color: #929292;
+  display: inline-block;
+  font-size: 10px;
+  position: absolute;
+  bottom: -23px;
+  right: 0; }
+
+.slider-review .read-all:hover {
+  border-color: transparent; }
+
+.slider-review .controls a {
+  background: url(../img/sprite.png) no-repeat;
+  width: 8px;
+  height: 11px;
+  position: absolute;
+  display: block;
+  top: 50%; }
+
+.slider-review .controls a {
+  display: block; }
+
+.slider-review .controls .reviews-prev a {
+  background-position: -61px -28px;
+  left: -13px; }
+
+.slider-review .controls .reviews-next a {
+  background-position: -71px -28px;
+  right: -13px; }
+
+.bx-viewport {
+  height: 363px; }
+
+.slider-review .bx-viewport {
+  height: 117px; }
+
 .promo {
   position: relative;
   height: 564px;
