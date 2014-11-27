@@ -145,6 +145,17 @@ $(document).ready(function () {
         getUrl(k, false);
       });
     }
+
+    var $sticker = $('#sticker');
+    var stickerTop = parseInt($sticker.offset().top, 10);
+    $(window).scroll(function() {
+      $sticker.css((parseInt($(window).scrollTop(),10) + parseInt($("#sticker").css('margin-top'),10) > stickerTop) ? {
+        position: 'fixed',
+        top: '0px'
+      } : {
+        position: 'relative'
+      });
+    });
   }
 
 });
