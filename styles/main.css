@@ -19,6 +19,14 @@ img {
 .icon {
   position: relative; }
 
+.round-border {
+  border-radius: 36px;
+  width: 72px;
+  margin-left: -23px;
+  margin-top: 7px;
+  padding-bottom: 8px;
+  box-shadow: 0 0 0 3px, 0 0 13px #333; }
+
 .label {
   font-size: 100%; }
 
