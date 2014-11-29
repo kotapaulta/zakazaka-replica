@@ -25,7 +25,7 @@ img {
   margin-left: -23px;
   margin-top: 7px;
   padding-bottom: 8px;
-  box-shadow: 0 0 0 3px, 0 0 13px #333; }
+  box-shadow: 0 0 0 3px, 0 0 13px #333333; }
 
 .label {
   font-size: 100%; }
@@ -1425,23 +1425,15 @@ footer {
   color: #000;
   width: 280px; }
 
-.rating .stars i {
-  background: url(../img/stars.png) no-repeat;
-  background-size: 34px auto;
-  width: 17px;
-  height: 17px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 1.3px; }
+.rating .stars {
+  padding-left: 2px; }
 
 .rating .stars i {
-  background: url(../img/stars.png) no-repeat;
-  background-size: 34px auto;
   width: 17px;
   height: 17px;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 1.3px; }
+  margin-right: 1px; }
 
 .rating .stars.active i {
   cursor: pointer; }
@@ -1455,10 +1447,10 @@ footer {
   background-position: 0 0; }
 
 .rating .stars .star {
-  background-position: 0 0; }
+  color: #C30000; }
 
 .rating .stars .star-dis {
-  background-position: -17px 0; }
+  color: #E4CECE; }
 
 .pagenavi {
   margin-bottom: 30px;
