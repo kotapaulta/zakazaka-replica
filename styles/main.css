@@ -21,11 +21,11 @@ img {
 
 .round-border {
   border-radius: 36px;
-  width: 72px;
+  width: 52px;
   margin-left: -23px;
   margin-top: 7px;
   padding-bottom: 8px;
-  box-shadow: 0 0 0 3px, 0 0 13px #333333; }
+  box-shadow: 0 0 0 2px, 0 0 10px #333333; }
 
 .label {
   font-size: 100%; }
@@ -791,7 +791,7 @@ footer {
   font-size: 22px; }
 
 .advant-box i {
-  font-size: 50px;
+  font-size: 30px;
   padding-top: 15px;
   padding-right: 0px; }
 
