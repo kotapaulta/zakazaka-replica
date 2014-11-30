@@ -1,3 +1,6 @@
+$close-modal-icon-color: #d2d2d2
+$close-modal-icon-hover-color: #b2b2b2
+
 .custom-modal
   display: none
   position: absolute
@@ -33,22 +36,27 @@
 
 
 .close-custom-modal
-  background: url(../img/sprite.png) no-repeat -561px 0
   height: 28px
-  right: 40px
-  top: 40px
   width: 29px
   display: inline-block
   position: absolute
   right: 40px
   top: 30px
-  text-indent: -9999px
+  border: solid 3px $close-modal-icon-color
+  border-radius: 40px
 
+.close-custom-modal i
+  font-size: 20px
+  padding-top: 1px
+  padding-left: 3px
+  color: $close-modal-icon-color
 
 .close-custom-modal:hover
-  background: url(../img/sprite-h.png) no-repeat -561px 0
   cursor: pointer
+  border-color: $close-modal-icon-hover-color
 
+.close-custom-modal:hover i
+  color: $close-modal-icon-hover-color
 
 .custom-modal-signin .form-signin,.form-reg,.form-feedback,.form-review,.form-recover,.form-invite,.form-partners,.form-order-auth,.form-order-notauth,.form-confirm,.form-district,.form-gift-order,.form-gift-thanks
   background-position: center top
