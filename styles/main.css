@@ -177,17 +177,21 @@ footer {
 .search-bar button, .search-bar-mini button {
   border: 0;
   background: 0;
-  width: 39px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   padding: 0;
   vertical-align: middle; }
 
-.search-bar button:before, .search-bar-mini button:before {
-  background-position: 0 0;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0; }
+.search-bar button, .search-bar-mini i {
+  height: 40px;
+  width: 40px;
+  padding-top: 5px;
+  vertical-align: bottom;
+  font-size: 23px;
+  border-radius: 20px;
+  color: white;
+  border: solid #626cb1;
+  background-color: #626cb1; }
 
 .search-bar input.styler[type="text"], .search-bar-mini input.styler[type="text"] {
   -webkit-border-radius: 39px;
