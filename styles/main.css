@@ -449,12 +449,13 @@ footer {
 
 .place-dropdown .dropdown:before, .dd-user-nav:before, .dd-msg:before, .dd-bkm:before {
   content: "";
-  background: url(../img/angle.png) no-repeat;
+  display: inline-block;
+  position: absolute;
+  top: -23px;
+  left: 5px;
   width: 50px;
   height: 23px;
-  display: inline-block;
-  top: -23px;
-  position: absolute; }
+  background: url(../img/angle.png) no-repeat; }
 
 .place-dropdown .dropdown {
   left: -11px; }
