@@ -174,6 +174,7 @@ footer {
   bottom: 1px; }
 
 .search-bar button, .search-bar-mini button {
+  outline: none;
   border: 0;
   background: 0;
   width: 40px;
@@ -230,7 +231,8 @@ footer {
   width: 100%;
   padding-left: 25px;
   color: #898b93;
-  font-size: 13px; }
+  font-size: 13px;
+  outline: none; }
 
 .nav-top .place span {
   color: #898b93;
