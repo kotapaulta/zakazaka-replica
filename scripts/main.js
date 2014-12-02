@@ -146,10 +146,16 @@ $(document).ready(function () {
       });
     }
 
-    var $sticker = $('#sticker');
+    var $sticker = $('#sticker-content');
+    var $footer = $('footer');
+    var $window = $(window);
     var stickerTop = parseInt($sticker.offset().top, 10);
     $(window).scroll(function() {
-      $sticker.css((parseInt($(window).scrollTop(),10) + parseInt($("#sticker").css('margin-top'),10) > stickerTop) ? {
+      $sticker.css((parseInt($(window).scrollTop(),10) + parseInt($("#sticker").css('margin-top'),10) > stickerTop) ?
+        ($footer.position().top - $window.scrollTop()  <= $sticker.height()) ? {
+          position: 'fixed',
+          top: $footer.position().top - $window.scrollTop() - $sticker.height() + 'px'
+        } : {
         position: 'fixed',
         top: '0px'
       } : {
