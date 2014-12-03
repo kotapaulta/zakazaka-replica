@@ -1,4 +1,27 @@
-/*global $*/
+/*global $, jQuery*/
+
+jQuery.extend(jQuery.fn, {toplinkwidth: function() {
+  var c = jQuery(".mainWrapper").outerWidth();
+  var b = jQuery(this).children("a").outerWidth(true);
+  var a = jQuery(window).width() / 2 - c / 2 - b;
+  if (a < 0) {
+    jQuery(this).hide();
+    return false;
+  } else {
+    if (jQuery(window).scrollTop() >= 1) {
+      jQuery(this).show();
+    }
+    jQuery(this).css({"padding-right": a + "px"});
+    return true;
+  }
+}});
+
+function animateCSS(a, b) {
+  $(a).addClass(b);
+  var c = window.setTimeout(function() {
+    $(a).removeClass(b);
+  }, 1300);
+}
 
 $(document).ready(function () {
   'use strict';
@@ -146,8 +169,12 @@ $(document).ready(function () {
       });
     }
 
-    var $sticker = $('#sticker-content');
-    var $footer = $('footer');
+  }
+
+
+  var $sticker = $('#sticker-content');
+  var $footer = $('footer');
+  if ($sticker.length && $footer.length){
     var $window = $(window);
     var stickerTop = parseInt($sticker.offset().top, 10);
     $(window).scroll(function() {
@@ -156,11 +183,33 @@ $(document).ready(function () {
           position: 'fixed',
           top: $footer.position().top - $window.scrollTop() - $sticker.height() + 'px'
         } : {
-        position: 'fixed',
-        top: '0px'
-      } : {
+          position: 'fixed',
+          top: '0px'
+        } : {
         position: 'relative'
       });
+    });
+  }
+
+  var $topLink = $("#top-link");
+  if ($topLink.length) {
+    var e = $topLink;
+    e.css({"padding-bottom": i});
+    e.toplinkwidth();
+    $(window).resize(function() {
+      e.toplinkwidth();
+    });
+    $(window).scroll(function() {
+      var k = 300;
+      if ($(window).scrollTop() >= k && e.toplinkwidth()) {
+        e.fadeIn(300).css("top", "0");
+      } else {
+        e.fadeOut(300).css("top", "-200px");
+      }
+    });
+    e.on("click", function(k) {
+      $("html, body").animate({scrollTop: 0}, 300);
+      return false;
     });
   }
 
