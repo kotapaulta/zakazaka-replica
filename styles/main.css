@@ -1534,7 +1534,9 @@ footer {
   background-position: -40px -29px; }
 
 #sticker-content {
-  width: 236px; }
+  height: 100%;
+  width: 236px;
+  overflow: auto; }
 
 #top-link {
   cursor: pointer;

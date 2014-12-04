@@ -172,12 +172,24 @@ $(document).ready(function () {
   }
 
 
-  var $sticker = $('#sticker-content');
+  var $stickerContent = $('#sticker-content');
+  var $sticker = $('#sticker');
   var $footer = $('footer');
-  if ($sticker.length && $footer.length){
+  if ($stickerContent.length && $footer.length){
     var $window = $(window);
-    var stickerTop = parseInt($sticker.offset().top, 10);
+    var stickerTop = parseInt($stickerContent.offset().top, 10);
     $(window).scroll(function() {
+      $stickerContent.css((parseInt($(window).scrollTop(),10) + parseInt($("#sticker").css('margin-top'),10) > stickerTop) ?
+        ($footer.position().top - $window.scrollTop()  <= $stickerContent.height()) ? {
+          position: 'fixed',
+          top: $footer.position().top - $window.scrollTop() - $stickerContent.height() + 'px'
+        } : {
+          position: 'fixed',
+          top: '0px'
+        } : {
+        position: 'relative'
+      });
+
       $sticker.css((parseInt($(window).scrollTop(),10) + parseInt($("#sticker").css('margin-top'),10) > stickerTop) ?
         ($footer.position().top - $window.scrollTop()  <= $sticker.height()) ? {
           position: 'fixed',
