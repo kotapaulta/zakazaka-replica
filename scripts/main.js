@@ -171,6 +171,17 @@ $(document).ready(function () {
 
   }
 
+  $(".carousel-stock .item button").click(function(k) {
+    k.preventDefault();
+    addToCart($(this).closest(".item"), "promo");
+  });
+
+  if ($(".s-restaurants").length) {
+    $(".b-popular-food .item button").click(function(k) {
+      k.preventDefault();
+      addToCart($(this).closest(".item"), "item");
+    });
+  }
 
   var $sticker = $('#sticker-content');
   var $footer = $('footer');
@@ -334,33 +345,6 @@ function getUrl(b, a) {
   return false;
 }
 
-function addToCart(d, b) {
-  if (checkDistrict()) {
-    var f = $(d).attr("data-id");
-    $.get("/ajax?action=addToCart&id=" + f + "&type=" + b + "&r=" + Math.random(), function (g) {
-      if (g !== "false") {
-        var data = g.split(":");
-        if (data.length > 1) {
-          $("#cart-panel .cart-food span").text(data[0]);
-          $("#cart-panel .cart-price span").text(data[1]);
-        }
-      }
-    });
-    $("#cart-panel").slideDown();
-    var a = $(d).find("img").clone().addClass("move-img");
-    $("body").append(a);
-    var c = $(d).find("img").offset(), e = $("#cart-panel").find(".cart-link").offset();
-    a.css({position: "absolute", top: c.top, left: c.left, opacity: 0.8, "border-radius": "0", "z-index": 1000});
-    a.animate({left: e.left, top: e.top, opacity: 0, width: 50, height: 50, borderRadius: "50%"}, 500, function () {
-      $(".move-img").remove();
-    });
-    if (b === "bonus") {
-      $(".b-food-balls").slideUp();
-      $("#cart-panel").attr("data-score", "1");
-    }
-  }
-}
-
 function checkDistrict() {
   return true;
 }
@@ -392,4 +376,71 @@ function orderForm(d, b) {
     $('#morder input[name="org"]').val(d);
     $("#order").click();
   }
+}
+
+function addToCart(d, b) {
+  var $cartPanel = $("#cart-panel");
+  if (checkDistrict()) {
+    var f = $(d).attr("data-id");
+    $.get("/ajax?action=addToCart&id=" + f + "&type=" + b + "&r=" + Math.random(), function(g) {
+      if (g != "false") {
+        var data = g.split(":");
+        if (data.length > 1) {
+          $("#cart-panel .cart-food span").text(data[0]);
+          $("#cart-panel .cart-price span").text(data[1]);
+        }
+      }
+    });
+    $cartPanel.removeClass('hide');
+    $cartPanel.slideDown();
+    var a = $(d).find("img").clone().addClass("move-img");
+    $("body").append(a);
+    var c = $(d).find("img").offset(), e = $cartPanel.find(".cart-link").offset();
+    a.css({position: "absolute",top: c.top,left: c.left,opacity: 0.8,"border-radius": "0","z-index": 1000});
+    a.animate({left: e.left,top: e.top,opacity: 0,width: 50,height: 50,borderRadius: "50%"}, 500, function() {
+      $(".move-img").remove();
+    });
+    if (b === "bonus") {
+      $(".b-food-balls").slideUp();
+      $("#cart-panel").attr("data-score", "1");
+    }
+  }
+}
+
+function itemButton() {
+  if ($(".restaurant-menu").length) {
+    $(".b-popular-food .item button").click(function(a) {
+      a.preventDefault();
+      addToCart($(this).closest(".item"), "item")
+    });
+    $(".b-stock .b-stock-item button").click(function(a) {
+      a.preventDefault();
+      addToCart($(this).closest(".b-stock-item"), "promo")
+    })
+  }
+}
+function removeItem(b, a) {
+  $.get("/ajax?action=removeCartItem&id=" + b + "&org_id=" + a + "&r=" + Math.random(), function(c) {
+    if (c != "false") {
+      $("#org" + a).replaceWith(c);
+      if ($(".checkout-items").children(".visible").length == 0) {
+        $(".b-empty").slideDown(400)
+      }
+    }
+  });
+  $("#item" + b).slideUp(400);
+  return false
+}
+function incrementItem(d, b, c) {
+  var a = parseInt($("#count" + d).val());
+  if (c == -1 && a == 1) {
+    return false
+  }
+  $.get("/ajax?action=incrementCartItem&id=" + d + "&org_id=" + b + "&value=" + c + "&r=" + Math.random(), function(e) {
+    if (e != "false") {
+      $("#org" + b).replaceWith(e)
+    }
+  });
+  $("#count" + d).val(a + c);
+  return false
 }
