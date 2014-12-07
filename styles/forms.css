@@ -304,7 +304,10 @@
   padding: 32px 0 30px; }
 
 .form-order-notauth .total {
-  padding: 32px 0 61px; }
+  padding: 139px 0 0px; }
+
+.form-order-notauth .close-custom-modal {
+  top: 138px; }
 
 .form-order-auth .total dl, .form-order-notauth .total dl {
   margin: 0 auto;
