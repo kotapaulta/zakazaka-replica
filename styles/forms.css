@@ -143,6 +143,17 @@
 .form-reg .field {
   margin-bottom: 17px; }
 
+.form-reg .field i,
+.form-signin .field i {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  font-size: 25px;
+  color: #E4E4E4; }
+
 .form-reg .accept {
   padding-bottom: 22px;
   font-size: 12px;
