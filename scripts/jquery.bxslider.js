@@ -223,7 +223,7 @@
 			// apply the calculated width after the float is applied to prevent scrollbar interference
 			slider.children.css('width', getSlideWidth());
 			// if slideMargin is supplied, add the css
-			if(slider.settings.mode == 'horizontal' && slider.settings.slideMargin > 0) slider.children.css('marginRight', slider.settings.slideMargin);
+			if(slider.settings.mode == 'horizontal' && slider.settings.slideMargin > 0) slider.children.css('marginRight', slider.settings.slideMargin - 2);
 			if(slider.settings.mode == 'vertical' && slider.settings.slideMargin > 0) slider.children.css('marginBottom', slider.settings.slideMargin);
 			// if "fade" mode, add positioning and z-index CSS
 			if(slider.settings.mode == 'fade'){
