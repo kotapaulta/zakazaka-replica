@@ -1,19 +1,13 @@
 /*global $, jQuery*/
 
 jQuery.extend(jQuery.fn, {toplinkwidth: function() {
+
   var c = jQuery(".mainWrapper").outerWidth();
   var b = jQuery(this).children("a").outerWidth(true);
   var a = jQuery(window).width() / 2 - c / 2 - b;
-  if (a < 0) {
-    jQuery(this).hide();
-    return false;
-  } else {
-    if (jQuery(window).scrollTop() >= 1) {
-      jQuery(this).show();
-    }
-    jQuery(this).css({"padding-right": a + "px"});
-    return true;
-  }
+
+  jQuery(this).css({"padding-right": a + "px"});
+  return true;
 }});
 
 function animateCSS(a, b) {
