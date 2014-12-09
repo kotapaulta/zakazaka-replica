@@ -192,7 +192,7 @@ $(document).ready(function () {
         ($footer.position().top - $window.scrollTop()  <= elementsHeight) ? {
           position: 'fixed',
           top: $footer.position().top - $window.scrollTop() - elementsHeight - 3 + 'px',
-          height: elementsHeight + 3 + 'px'
+          height: elementsHeight + 12 + 'px'
         } : {
           position: 'fixed',
           top: '0px',
