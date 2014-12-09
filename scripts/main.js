@@ -182,16 +182,24 @@ $(document).ready(function () {
   if ($sticker.length && $footer.length){
     var $window = $(window);
     var stickerTop = parseInt($sticker.offset().top, 10);
+    var elements = $('#sticker-content>li');
+    var elementsHeight = 0;
+    elements.each(function(i){
+      elementsHeight += $(elements[i]).height();
+    });
     $(window).scroll(function() {
       $sticker.css((parseInt($(window).scrollTop(),10) + parseInt($("#sticker").css('margin-top'),10) > stickerTop) ?
-        ($footer.position().top - $window.scrollTop()  <= $sticker.height()) ? {
+        ($footer.position().top - $window.scrollTop()  <= elementsHeight) ? {
           position: 'fixed',
-          top: $footer.position().top - $window.scrollTop() - $sticker.height() + 'px'
+          top: $footer.position().top - $window.scrollTop() - elementsHeight - 3 + 'px',
+          height: elementsHeight + 3 + 'px'
         } : {
           position: 'fixed',
-          top: '0px'
+          top: '0px',
+          height: '100%'
         } : {
-        position: 'relative'
+        position: 'relative',
+        height: '100%'
       });
     });
   }
