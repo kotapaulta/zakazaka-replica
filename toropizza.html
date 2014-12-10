@@ -25,7 +25,7 @@
   <script src="scripts/jquery.bxslider.js"></script>
   <script src="scripts/main.js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target=".nav-left">
 <div class="mainWrapper">
 
 <!--        HEADER        -->
@@ -132,8 +132,13 @@
           <div class="rating">
             8.0/10
 								<span class="stars">
-									<i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star-dis"></i> <i class="fa fa-cutlery star-dis"></i>
+									<i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                    class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                    class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                    class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                    class="fa fa-cutlery star-dis"></i> <i class="fa fa-cutlery star-dis"></i>
 								</span>
+
             <div class="b-tooltip th">Оцените ресторан</div>
           </div>
           <div class="dl-list">
@@ -178,7 +183,8 @@
               <span class="name">Татьяна</span>
               <span class="date">27 мая, 20:25</span>
             </div>
-            <div class="text">Очень вкусно, достаточно быстро, удобно расплачиваться карточкой. Прекрасный ресторан.</div>
+            <div class="text">Очень вкусно, достаточно быстро, удобно расплачиваться карточкой. Прекрасный ресторан.
+            </div>
           </div>
           <div class="item">
             <div class="info">
@@ -186,7 +192,10 @@
               <span class="name">Денис</span>
               <span class="date">26 февраля, 05:32</span>
             </div>
-            <div class="text">Очень вкусная пицца. Привезли быстрее, чем обещали, хотя это скорее заслуга того, что везли мне ее в 3 часа ночи :) Но надо заметить, что пицца была очень горячая, я от такого уже успел отвыкнуть.</div>
+            <div class="text">Очень вкусная пицца. Привезли быстрее, чем обещали, хотя это скорее заслуга того, что
+              везли мне ее в 3 часа ночи :) Но надо заметить, что пицца была очень горячая, я от такого уже успел
+              отвыкнуть.
+            </div>
           </div>
           <div class="item">
             <div class="info">
@@ -239,10 +248,13 @@
 <div class="col-md-3 catalog-filter-wrapper">
   <nav class="nav-left">
     <div class="title">Меню заведения</div>
-    <ul id="sticker" class="nav-items">
+    <ul id="sticker" class="nav-items nav">
       <div id="sticker-content">
-        <li class="selected">
-          <a href="/restaurants/menu/toropizza" class="red">Акция</a>
+        <li class="active">
+          <a href="#popular">Популярные блюда</a>
+        </li>
+        <li>
+          <a href="#drinks">Напитки</a>
         </li>
         <li class="">
           <a href="/restaurants/menu/toropizza/toropizza-pitstsa">Пицца</a>
@@ -265,15 +277,6 @@
         <li>
           <a href="/restaurants/menu/toropizza/toropizza-salatyi">Салаты</a>
         </li>
-        <li>
-          <a href="/restaurants/menu/toropizza/toropizza-zakuski">Закуски</a>
-        </li>
-        <li>
-          <a href="/restaurants/menu/toropizza/toropizza-desertyi">Десерты</a>
-        </li>
-        <li>
-          <a href="/restaurants/menu/toropizza/toropizza-napitki">Напитки</a>
-        </li>
       </div>
     </ul>
   </nav>
@@ -286,7 +289,7 @@
     <h1 class="h1 bb">ТороПицца - меню ресторана</h1>
 
     <div class="b-popular-food">
-      <h2>Популярные блюда</h2>
+      <h2 id="popular">Популярные блюда</h2>
 
       <div class="items">
         <div class="item" data-id="48252">
@@ -306,7 +309,7 @@
         </div>
 
       </div>
-      <h2>Пиво</h2>
+      <h2 id="drinks">Пиво</h2>
 
       <div class="items">
         <div class="item" data-id="260153">
@@ -514,8 +517,10 @@
             <div class="rating">
               8.2/10
                       <span class="stars">
-                        <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
-                          class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                        <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                          class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                          class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                          class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
                           class="fa fa-cutlery star-dis"></i> <i class="fa fa-cutlery star-dis"></i>
                       </span>
             </div>
@@ -561,8 +566,10 @@
             <div class="rating">
               8.9/10
                       <span class="stars">
-                        <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
-                          class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                        <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                          class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                          class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                          class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
                           class="fa fa-cutlery star-dis"></i> <i class="fa fa-cutlery star-dis"></i>
                       </span>
             </div>
@@ -602,8 +609,10 @@
             <div class="rating">
               8.5/10
                       <span class="stars">
-                        <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
-                          class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                        <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                          class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                          class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                          class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
                           class="fa fa-cutlery star-dis"></i> <i class="fa fa-cutlery star-dis"></i>
                       </span>
             </div>
@@ -639,8 +648,10 @@
             <div class="rating">
               7.1/10
                       <span class="stars">
-                        <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
-                          class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star-dis"></i> <i
+                        <i class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                          class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                          class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star"></i> <i
+                          class="fa fa-cutlery star"></i> <i class="fa fa-cutlery star-dis"></i> <i
                           class="fa fa-cutlery star-dis"></i> <i class="fa fa-cutlery star-dis"></i>
                       </span>
             </div>
@@ -725,6 +736,7 @@
     <span class="close-custom-modal">
       <i class="fa fa-times"></i>
     </span>
+
     <div class="form">
       <div class="custom-modal-title">Регистрация</div>
       <form onsubmit="return userReg();">
@@ -756,6 +768,7 @@
     </div>
     <div class="social-auth">
       <span>Используя аккаунт из социальной сети</span>
+
       <div class="social-auth-btn">
         <a title="ВКонтакте" href="/oauth/vk" target="_top" class="vk">ВКонтакте</a>
         <a title="Facebook" href="/oauth/facebook" target="_top" class="fb">Facebook</a>
@@ -772,6 +785,7 @@
     <span class="close-custom-modal">
       <i class="fa fa-times"></i>
     </span>
+
     <div class="form">
       <div class="custom-modal-title">Вход</div>
       <form onsubmit="return userLogin();">
@@ -786,6 +800,7 @@
         <div class="field error"></div>
         <div class="buttons">
           <a class="recover-link modalLink" href="#mrecover">Забыли пароль?</a>
+
           <div class="button">
             <button class="btn btn-success" type="submit">Войти</button>
           </div>
@@ -798,6 +813,7 @@
     </div>
     <div class="social-auth">
       <span>Используя аккаунт из социальной сети</span>
+
       <div class="social-auth-btn">
         <a title="ВКонтакте" href="/oauth/vk" target="_top" class="vk">ВКонтакте</a>
         <a title="Facebook" href="/oauth/facebook" target="_top" class="fb">Facebook</a>

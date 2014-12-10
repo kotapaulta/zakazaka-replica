@@ -67,7 +67,7 @@ $(document).ready(function () {
     $(".js-dd").hide().removeClass("open");
   });
 
-  $(document).on("click", function (element) {
+  /*$(document).on("click", function (element) {
     if ($(element.target).closest(".user-panel .open").length) {
       return;
     }
@@ -84,7 +84,7 @@ $(document).ready(function () {
     $(".cart-panel .open").hide().removeClass("open");
     $(".cart-bkm a").removeClass("active");
     element.stopPropagation();
-  });
+  });*/
 
   /*  TABS  */
   $(".btn-tab").on("click", function (element) {
@@ -144,25 +144,6 @@ $(document).ready(function () {
         $(this).next().stop(true, true).slideToggle(200);
       }
     });
-    if ($(".restaurant-menu").length) {
-      $(".nav-items a:not(.icon)").on("click", function (l) {
-        l.preventDefault();
-        $(this).closest(".nav-items").find("li.selected").each(function () {
-          $(this).removeClass("selected");
-        });
-        $(this).parent().addClass("selected");
-        if ($(this).closest("ul").hasClass("nav-sub-items")) {
-          $(this).closest("ul").closest("li").addClass("selected");
-        } else {
-          $(".nav-sub-items:visible").each(function () {
-            $(this).slideUp(200);
-          });
-        }
-        var k = $(this).attr("href");
-        getUrl(k, false);
-      });
-    }
-
   }
 
   $(".carousel-stock .item button").click(function(k) {
